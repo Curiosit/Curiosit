@@ -1,2 +1,0 @@
-infoTextD = [ 'car', 'cat', 'dog' ];
-

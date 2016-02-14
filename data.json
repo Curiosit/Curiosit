@@ -1,1 +1,5 @@
-[ 'car', 'cat', 'dog' ]
+[
+    {"word":"cat", "insert":"Doe", "description":"Doez"}, 
+    {"word":"car", "insert":"Zoe", "description":"Goez"}, 
+    {"word":"dog", "insert":"Boe", "description":"Woez"}
+]

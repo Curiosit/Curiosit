@@ -1,5 +1,12 @@
 [
+<<<<<<< HEAD
     {"word":"cat", "insert":"kat", "description":"en kat"}, 
     {"word":"car", "insert":"bil", "description":"en bil"}, 
     {"word":"dog", "insert":"hund", "description":"en hund"}
 ]
+=======
+    {"word":"cat", "insert":"Doe", "description":"Doez"}, 
+    {"word":"car", "insert":"Zoe", "description":"Goez"}, 
+    {"word":"dog", "insert":"Boe", "description":"Woez"}
+]
+>>>>>>> origin/master

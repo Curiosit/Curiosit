@@ -1,0 +1,5 @@
+[
+    {"word":"cat", "insert":"kat", "description":"en kat"}, 
+    {"word":"car", "insert":"bil", "description":"en bil"}, 
+    {"word":"dog", "insert":"hund", "description":"en hund"}
+]

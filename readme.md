@@ -1,7 +1,7 @@
 I am an architect learning programming. 
 
 # Programming
-- Javascript
+- Javascript (HTML, CSS )
 - Python (Keras / SciKit Learn)
 
 # Currently Learning

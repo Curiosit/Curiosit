@@ -9,9 +9,8 @@ I am an architect learning programming.
 - AEC Hackathon 2023 in Copenhagen project (11 people): SpeckleLCA. I have been responsible for developing converter from Speckle file format into LCAByg JSON and LCAByg API connection (Javascript, Vue)
     - https://github.com/linkarkitektur/SpeckleLCA
  
-- Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas)
-    - https://slad.ai/ *(code available upon request)*
-
+- Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas) - *code available upon request*
+    - https://slad.ai/ 
 
 # Programming
 - Javascript (HTML, CSS )

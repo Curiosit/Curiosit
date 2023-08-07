@@ -1,4 +1,3 @@
-I am an architect learning programming. 
 
 # Projects
 - PhD carbon footprint prediction project using Convolutional Neural Networks (Python, Sci-Kit Learn, Keras, Grasshopper3d)

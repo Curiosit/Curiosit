@@ -1,8 +1,17 @@
 I am an architect learning programming. 
 
+# Projects
+- PhD carbon footprint prediction project using Convolutional Neural Networks
+    - https://github.com/Curiosit/PhD-PredictingCarbonFootprintOfBuildings 
+- Series of Python scripts for converting IFC and Excel files into LCAByg (danish carbon footprint calculation program) :
+    - https://github.com/Curiosit/IfcJsonLcabygParser
+    - https://github.com/Curiosit/ExcelToJSONLCAByg
+
+
+
 # Programming
 - Javascript (HTML, CSS )
-- Python (Keras / SciKit Learn) -> my PhD carbon footprint prediction project using Convolutional Neural Networks ( https://github.com/Curiosit/PhD-PredictingCarbonFootprintOfBuildings )
+- Python (Keras / SciKit Learn)
 
 # Currently Learning
 - Typescript

@@ -6,7 +6,7 @@ I am an architect learning programming.
 
 # Currently Learning
 - Typescript
-- React
+- React + Next.js
 
 # I have used in various projects
 - C#

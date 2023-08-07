@@ -10,7 +10,7 @@ I am an architect learning programming.
     - https://github.com/linkarkitektur/SpeckleLCA
  
 - Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas)
-      - https://slad.ai/ *(code available upon request)*
+    - https://slad.ai/ *(code available upon request)*
 
 
 # Programming

@@ -4,8 +4,8 @@ I am an architect learning programming.
 - PhD carbon footprint prediction project using Convolutional Neural Networks (Python, Sci-Kit Learn, Keras, Grasshopper3d)
     - https://github.com/Curiosit/PhD-PredictingCarbonFootprintOfBuildings 
 - Series of Python scripts for converting IFC and Excel files into LCAByg (danish carbon footprint calculation program) :
-    - https://github.com/Curiosit/IfcJsonLcabygParser
-    - https://github.com/Curiosit/ExcelToJSONLCAByg
+    - https://github.com/Curiosit/IfcJsonLcabygParser ( uses an IFC file to genreate JSON, that is then imported to LCAByg desktop app )
+    - https://github.com/Curiosit/ExcelToJSONLCAByg ( uses an Excel file to send it via API to the LCAByg web server and gets the calculation results back )
 - AEC Hackathon 2023 in Copenhagen project (11 people): SpeckleLCA. I have been responsible for developing converter from Speckle file format into LCAByg JSON and LCAByg API connection (Javascript, Vue)
     - https://github.com/linkarkitektur/SpeckleLCA
  

@@ -5,7 +5,7 @@
 - Series of Python scripts for converting IFC and Excel files into LCAByg (danish carbon footprint calculation program) :
     - https://github.com/Curiosit/IfcJsonLcabygParser ( uses an IFC file to genreate JSON, that is then imported to LCAByg desktop app )
     - https://github.com/Curiosit/ExcelToJSONLCAByg ( uses an Excel file to send it via API to the LCAByg web server and gets the calculation results back )
-- AEC Hackathon 2023 in Copenhagen project (11 people): SpeckleLCA. I have been responsible for developing converter from Speckle file format into LCAByg JSON and LCAByg API connection (Javascript, Vue)
+- AEC Hackathon 2023 in Copenhagen project (11 people): SpeckleLCA. I have been responsible for developing converter from Speckle into LCAByg JSON and LCAByg API connection (Javascript, Vue)
     - https://github.com/linkarkitektur/SpeckleLCA
  
 - SLAD.ai - Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, DynamoDB, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas, UI/UX design, graphics) - *code available upon request*

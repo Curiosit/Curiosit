@@ -21,6 +21,7 @@
 # Currently Learning
 - Typescript
 - React + Next.js
+- Three.js + IFC.js
 
 # I have used in various projects
 - C#

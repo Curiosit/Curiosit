@@ -13,6 +13,10 @@
 
 - Oekobaudat.py is a jupyter notebook used to manipulate data from oekobaudat database of Environmental Product Declarations of building materials. The notebook selects part of the data, adds language translations, and convert the data into the format needed by the SLAD.ai - carbon calculation tool for architects website, finally uploading the data to the AWS DynamoDB database (Python, Pandas, AWS, AWS_Wrangler, DynamoDB) 
     - https://github.com/Curiosit/oekobaudat-py
+ 
+- quotr is a Next.js app for sharing... quotes! A training project with Javascript, MongoDB, NextAuth and Vercel deployment.
+      - https://github.com/Curiosit/quotr
+      - https://quotr-d35xop6ij-practical-solution.vercel.app/
 
 # Programming
 - Javascript (HTML, CSS ) -> Frontend, Fullstack with node.js backend

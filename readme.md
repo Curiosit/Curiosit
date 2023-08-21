@@ -15,8 +15,8 @@
     - https://github.com/Curiosit/oekobaudat-py
 
 # Programming
-- Javascript (HTML, CSS )
-- Python (Keras / SciKit Learn)
+- Javascript (HTML, CSS ) -> Frontend, Fullstack with node.js backend
+- Python (Keras / SciKit Learn) -> data analysis, data management
 
 # Currently Learning
 - Typescript

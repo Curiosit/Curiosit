@@ -15,8 +15,8 @@
     - https://github.com/Curiosit/oekobaudat-py
  
 - quotr is a Next.js app for sharing... quotes! A training project with Javascript, MongoDB, NextAuth and Vercel deployment.
-      - https://github.com/Curiosit/quotr
-      - https://quotr-d35xop6ij-practical-solution.vercel.app/
+    - https://github.com/Curiosit/quotr
+    - https://quotr-d35xop6ij-practical-solution.vercel.app/
 
 # Programming
 - Javascript (HTML, CSS ) -> Frontend, Fullstack with node.js backend

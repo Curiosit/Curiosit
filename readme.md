@@ -17,6 +17,7 @@
 - quotr is a Next.js app for sharing... quotes! A training project with Javascript, MongoDB, NextAuth and Vercel deployment.
     - https://github.com/Curiosit/quotr
     - https://quotr-d35xop6ij-practical-solution.vercel.app/
+      
 - Web BIM Viewer is a project created using IFC.js tutorial. The web app uses Typescript, React, Three.js, IFC.js and Firebase integration.
     - https://github.com/Curiosit/ifcjs-frontend-app
 

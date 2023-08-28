@@ -1,6 +1,6 @@
 # Programming
-- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend
-- Python (Keras / SciKit Learn) -> data analysis, data management, machine learning
+- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend / AWS Lambda, API gateway; firebase/mongodb/dynamodb
+- Python (Keras, SciKit Learn, Pandas, Numpy) -> data analysis, data management, machine learning
 [![Fullstack](https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,threejs,tailwind,firebase,dynamodb,mongodb,github,py&theme=light)](https://skillicons.dev)
 
 

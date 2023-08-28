@@ -1,3 +1,12 @@
+# Programming
+- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend
+- Python (Keras / SciKit Learn) -> data analysis, data management, machine learning
+[![Fullstack](https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,threejs,tailwind,firebase,dynamodb,mongodb,github,py&theme=light)](https://skillicons.dev)
+
+
+# Currently Learning
+- Three.js + IFC.js
+
 
 # Projects
 - SLAD.ai - Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, DynamoDB, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas, UI/UX design, graphics) - *code available upon request*
@@ -21,12 +30,4 @@
 - Web BIM Viewer is a project created using IFC.js tutorial. The web app uses Typescript, React, Three.js, IFC.js and Firebase integration.
     - https://github.com/Curiosit/ifcjs-frontend-app
 
-# Programming
-- Javascript (HTML, CSS ) -> Frontend, Fullstack with node.js backend
-- Python (Keras / SciKit Learn) -> data analysis, data management
-
-# Currently Learning
-- Typescript
-- React + Next.js
-- Three.js + IFC.js
 

@@ -29,5 +29,9 @@
       
 - Web BIM Viewer is a project created using IFC.js tutorial. The web app uses Typescript, React, Three.js, IFC.js and Firebase integration.
     - https://github.com/Curiosit/ifcjs-frontend-app
+ 
+- Material Library is a Next.js project that is an app for architects and investors for picking building materials. Typescript, Javascript, MongoDB, TailwindCSS
+    - https://material-library.vercel.app/
+    - https://github.com/Curiosit/material-library
 
 

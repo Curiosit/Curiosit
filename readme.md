@@ -5,7 +5,7 @@
 
 
 # Currently Learning
-- Three.js + IFC.js
+- D3.js + Three.js + IFC.js
 
 
 # Projects

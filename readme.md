@@ -5,6 +5,7 @@
 
 
 # Currently Learning
+- Python
 - D3.js + Three.js + IFC.js
 
 

@@ -1,12 +1,8 @@
 # Programming
-- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend / AWS Lambda, API gateway; firebase/mongodb/dynamodb
+- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend / AWS Lambda, API gateway; firebase/mongodb/dynamodb, IFC.js, THREE.js, D3.js
 - Python (Keras, SciKit Learn, Pandas, Numpy) -> data analysis, data management, machine learning
 [![Fullstack](https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,threejs,tailwind,firebase,dynamodb,mongodb,github,py&theme=light)](https://skillicons.dev)
 
-
-# Currently Learning
-- Python
-- D3.js + Three.js + IFC.js
 
 
 # Projects

@@ -10,6 +10,9 @@
     - https://slad.ai/
 - SLAD.ai.3d is a WIP of a 3d IFC based carbon calculator for archtiects. The web app uses Typescript, React, Three.js, IFC.js and Firebase integration.
     - https://github.com/Curiosit/slad.ai-3d-ifc-co2-calculator
+- Best Mashup Project at AEC Hackathon 2024 in Copenhagen, OpenDetail. A complex solution for sharing 3d architectural details, with automated conversion. C#, Typescript, React, MongoDB
+    - https://github.com/imanwarsame/opendetail React Frontend
+    - https://github.com/aashkann/OpenDetail C# Speckle Automate Function
 - Carbon footprint prediction project using Convolutional Neural Networks (Python, Sci-Kit Learn, Keras, Grasshopper3d)
     - https://github.com/Curiosit/PhD-PredictingCarbonFootprintOfBuildings 
 - Series of Python scripts for converting IFC and Excel files into LCAByg (danish carbon footprint calculation program) :

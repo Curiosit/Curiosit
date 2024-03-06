@@ -3,6 +3,7 @@
 - Python (Keras, SciKit Learn, Pandas, Numpy) -> data analysis, data management, machine learning
 [![Fullstack](https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,threejs,tailwind,firebase,dynamodb,mongodb,github,py&theme=light)](https://skillicons.dev)
 
+[![Curiosit's GitHub stats](https://github-readme-stats.vercel.app/api?username=curiosit)](https://github.com/anuraghazra/github-readme-stats)
 
 
 # Projects

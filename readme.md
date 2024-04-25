@@ -23,8 +23,7 @@
     - https://github.com/linkarkitektur/SpeckleLCA
 - AEC Hackathon 2024 in Zurich project: InfraWeb. Automating turning 3d into 2d using THREE.js and IFC.js and github pages for autodeployment CI/CD. I have been responsible for setting up React, then creating the viewer using IFC.js and THREE.js and merging functionalities
     - https://github.com/opensource-construction/infraweb/
-- Material Library is a work-in-progress open-source Next.js project that is an app for architects and investors for picking building materials based on enviornmental data. Typescript, Javascript, MongoDB, TailwindCSS using Next.js auto deployment CI/CD
-    - https://material-library.vercel.app/
-    - https://github.com/Curiosit/material-library
+- Grasshopper Plugin for loading OEKOBAU.dat material data into Rhino and Grasshopper
+    - https://github.com/Curiosit/goeko.gha
 
 

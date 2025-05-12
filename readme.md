@@ -1,11 +1,3 @@
-# Programming
-- Javascript / Typescript (React + Next.js) -> Frontend, Fullstack with node.js backend / AWS Lambda, API gateway; firebase/mongodb/dynamodb, IFC.js, THREE.js, D3.js
-- Python (Keras, SciKit Learn, Pandas, Numpy) -> data analysis, data management, machine learning
-[![Fullstack](https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,threejs,tailwind,firebase,dynamodb,mongodb,github,py&theme=light)](https://skillicons.dev)
-
-[![Curiosit's GitHub stats](https://github-readme-stats.vercel.app/api?username=curiosit)](https://github.com/anuraghazra/github-readme-stats)
-
-
 # Projects
 - SLAD.ai - Carbon calculator for architects. Webapp (Vanilla Javascript, Bootstrap, Webpack, Amazon AWS API integration, DynamoDB, Lambda functions, ChatGPT API integration, data scraping from excel using Python and Pandas, UI/UX design, graphics) - *code available upon request*
     - https://slad.ai/

@@ -2,7 +2,7 @@
 
 **Architect, PhD · Building researcher · AEC software engineer**
 
-I build computational tools for architecture and building performance: **daylight simulation, machine learning, Grasshopper, BIM/IFC, LCA and browser-based AEC software**.
+I build computational tools for architecture and building performance: **daylight simulation, machine learning, Grasshopper, BIM/IFC, and browser-based AEC software**.
 
 My background combines ten years of architectural practice with research and software development. I currently work at the Faculty of Architecture, Warsaw University of Technology, where my research focuses on daylight, building regulation and computational methods.
 

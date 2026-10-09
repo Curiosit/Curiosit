@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mateusz Płoszaj-Mazurek — building researcher, daylight and computation</title>
+<title>Mateusz Płoszaj-Mazurek — design variant</title>
+<meta name="robots" content="noindex">
 <meta name="description" content="Building researcher at Warsaw University of Technology. Daylight regulation and performance, fast daylight prediction, carbon footprint methods and computational design. Consulting as AIE.">
 <meta property="og:title" content="Mateusz Płoszaj-Mazurek">
 <meta property="og:description" content="Building researcher: daylight, building regulation, computational design.">
@@ -592,6 +593,162 @@ html[data-view="cv"] .subhead{display:none}
   html[data-view="cv"] .mast{padding:0 0 6pt}
   html[data-view="cv"] h1{font-size:22pt;margin:0 0 3pt}
 }
+
+/* ================================================================
+   APPLE-DESIGN VARIANT — overrides only. Everything above is the
+   original page; this block changes the design language:
+   system type with size-specific tracking, light materials,
+   card surfaces, a sliding segmented control, press feedback,
+   materializing popovers and a spring-driven bottom sheet.
+   ================================================================ */
+:root{
+  --paper:#F5F5F7; --paper-deep:#E8E8ED; --ink:#1D1D1F; --graphite:#6E6E73;
+  --shade:#0B6E8A; --rule:rgba(0,0,0,.08); --surface:#FFFFFF;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  --r-lg:28px; --r-md:18px; --r-sm:12px;
+  --spring:linear(0,.009,.035 2.1%,.141 4.4%,.723 15.5%,.938 22.2%,1.017 29.7%,1.03 34%,1.018 41.5%,.997 55.5%,1);
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+}
+body{font-size:17px;line-height:1.47;letter-spacing:-.022em;font-feature-settings:normal;-webkit-font-smoothing:antialiased}
+p,li{letter-spacing:-.016em}
+a{text-decoration:none;color:var(--shade)}
+a:hover{text-decoration:underline;text-decoration-thickness:1px}
+.lede,.lede-sub,.sec-body p,.rows h3,.pubs .t{color:var(--ink)}
+
+/* type scale: tighter tracking and leading as size grows */
+h1{font-weight:700;font-stretch:100%;font-size:clamp(2.8rem,7vw,5.25rem);line-height:1.02;letter-spacing:-.035em;max-width:14ch}
+.kicker{font-size:19px;font-weight:600;color:var(--sun-ink);letter-spacing:-.01em}
+.lede{font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.3;letter-spacing:-.022em;font-weight:500}
+.lede-sub{font-size:17px;color:var(--graphite)}
+.acro{font-size:clamp(2.6rem,6.4vw,4.6rem);letter-spacing:-.04em;font-weight:700}
+.acro span:not(.sr-only){font-stretch:100%;color:rgba(29,29,31,.22)}
+.acro span b{font-stretch:100%;color:var(--ink)}
+.acro.is-open span:not(.sr-only){color:var(--ink)}
+h3{font-weight:600;letter-spacing:-.02em}
+.hl-key{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:-.025em;color:var(--ink);font-stretch:100%}
+
+/* ---------- top bar: translucent material, scroll-edge shadow, no border ---------- */
+.topbar{background:rgba(245,245,247,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:0;transition:box-shadow .3s}
+html.scrolled .topbar{box-shadow:0 1px 0 rgba(0,0,0,.06),0 8px 24px -16px rgba(0,0,0,.25)}
+.tb-inner{height:52px;max-width:1080px}
+.tb-name,.sheet-nav a,.sheet-cv a,.dl-menu a{color:var(--ink)}
+.tb-name{font-stretch:100%;font-weight:600;font-size:16px;letter-spacing:-.02em}
+.tb-nav a{font-size:13px;color:var(--ink);opacity:.8;letter-spacing:-.01em}
+.tb-nav a:hover{opacity:1;text-decoration:none}
+.tb-sun{height:2px;bottom:0}
+.tb-dot{box-shadow:0 0 0 3px rgba(245,245,247,.9)}
+
+/* ---------- segmented control with a sliding thumb ---------- */
+.lens{position:relative;border:0;background:rgba(118,118,128,.12);padding:2px;border-radius:9px;isolation:isolate}
+.lens::before{content:"";position:absolute;z-index:-1;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);border-radius:7px;background:#fff;
+  box-shadow:0 3px 8px rgba(0,0,0,.12),0 3px 1px rgba(0,0,0,.04);transition:transform .45s var(--spring)}
+html[data-view="aie"] .lens::before{transform:translateX(100%)}
+.lens button{flex:1;border-radius:7px;font-size:13px;font-weight:500;padding:5px 16px;color:var(--ink);background:none!important;transition:transform .1s var(--ease-out)}
+.lens button[aria-checked="true"]{color:var(--ink);font-weight:600}
+
+/* ---------- press feedback on everything pressable ---------- */
+.dl-btn,.chip,.print-btn,.menu-btn,.lens button,.ask{transition:transform .1s var(--ease-out),background-color .2s}
+.dl-btn:active,.chip:active,.print-btn:active,.menu-btn:active,.lens button:active{transform:scale(.96)}
+.dl-btn{background:var(--ink);color:#fff;font-weight:600;font-size:15px;letter-spacing:-.01em;padding:11px 20px}
+.dl-btn:hover{text-decoration:none;background:#000}
+.dl[open] .dl-btn{background:var(--ink)}
+.chip{border:0;background:rgba(118,118,128,.12);font-weight:500}
+.chip:hover{background:rgba(118,118,128,.2);color:var(--ink)}
+.print-btn,.menu-btn{border:0;background:rgba(118,118,128,.12);color:var(--ink);font-weight:600}
+.menu-btn[aria-expanded="true"]{background:var(--ink);color:#fff}
+.dl-compact .dl-btn{background:var(--sun);color:var(--ink)}
+
+/* ---------- popover: anchored to its button, materializes ---------- */
+.dl-menu{border:0;border-radius:var(--r-sm);padding:6px;background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);
+  box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 20px 50px -12px rgba(0,0,0,.28);transform-origin:top left}
+.dl-compact .dl-menu{transform-origin:top right}
+.dl[open] .dl-menu{animation:materialize .32s var(--spring) both}
+@keyframes materialize{from{opacity:0;transform:scale(.92) translateY(-6px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.dl-menu a{border-radius:8px}
+.dl-menu a:hover{background:rgba(0,0,0,.05);text-decoration:none}
+
+/* ---------- layout: single column, sections as cards ---------- */
+.wrap{max-width:1080px}
+.mast{padding:84px 0 40px}
+.portrait{width:120px;height:120px;filter:none;box-shadow:0 10px 30px -10px rgba(0,0,0,.35)}
+.flow{gap:20px;padding-bottom:20px}
+.sec{display:block;background:var(--surface);border:0;border-radius:var(--r-lg);padding:clamp(28px,5vw,56px);
+  box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.sec > h2{position:static;font-stretch:100%;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.08;letter-spacing:-.03em;font-weight:700;margin:0 0 28px}
+.sec-body{max-width:68ch}
+.sec-body.wide{max-width:none}
+.subhead{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--graphite);margin:34px 0 4px}
+.rows > li,.pubs li{border-top:.5px solid rgba(0,0,0,.1)}
+.when{font-size:13px}
+.tag,.status{font-size:11.5px;letter-spacing:0;border:0;background:rgba(118,118,128,.12);color:var(--graphite);padding:1px 8px}
+.status{background:rgba(11,110,138,.1);color:var(--shade)}
+.cites{color:var(--sun-ink)}
+.badge{border:0;background:rgba(118,118,128,.12)}
+.collab{border-left:0;padding:0}
+.collab p:first-child{font-size:1.35rem;line-height:1.35;letter-spacing:-.022em;font-weight:500}
+.svc{border-bottom:.5px solid rgba(0,0,0,.1);grid-template-columns:2.4em 1fr}
+.svc-mark{font-stretch:100%;font-weight:700;color:var(--sun)}
+.svc h3{font-size:1.35rem}
+.teach-stats b{font-stretch:100%;font-weight:700;font-size:2.6rem;letter-spacing:-.04em}
+
+/* sun band and node canvas as inset panels */
+.sunband{border:0;background:var(--surface);border-radius:var(--r-lg);padding:clamp(24px,4vw,44px);margin:0 0 20px}
+.sb-say{font-size:1.25rem;letter-spacing:-.02em;line-height:1.4}
+.sb-say strong{background:none;color:var(--sun-ink)}
+#city-input{border:0;background:rgba(118,118,128,.12);border-radius:10px;font-size:15px;padding:9px 14px}
+#city-input:focus{outline:none;box-shadow:0 0 0 4px rgba(11,110,138,.25)}
+#city-results{border:0;border-radius:var(--r-sm);background:rgba(255,255,255,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 20px 50px -12px rgba(0,0,0,.28)}
+#city-results li:hover,#city-results li.is-cursor{background:var(--shade)}
+.gh{border-radius:var(--r-lg)}
+.node,.comp,.preview,.panel{border-radius:10px}
+
+/* media: rounded, softly lifted */
+.hero-media,.hl-fig,.svc-fig{border:0;border-radius:var(--r-md);box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 18px 40px -22px rgba(0,0,0,.35)}
+.hl-fig figcaption,.svc-fig figcaption{border-top:.5px solid rgba(0,0,0,.08);font-size:12.5px}
+.hero-card{gap:40px}
+
+#bg svg{opacity:.18}
+.gh-note{margin:12px 0 26px}
+footer{border-top:0;font-size:12px}
+
+/* ---------- mobile: spring bottom sheet with grabber and scrim ---------- */
+.scrim{position:fixed;inset:0;z-index:48;background:rgba(0,0,0,.32);opacity:0;pointer-events:none}
+.sheet{top:auto;bottom:0;left:0;right:0;max-height:88vh;border-radius:22px 22px 0 0;
+  background:rgba(250,250,252,.86);backdrop-filter:saturate(180%) blur(28px);-webkit-backdrop-filter:saturate(180%) blur(28px);
+  box-shadow:0 -10px 40px -10px rgba(0,0,0,.25);padding-top:4px;touch-action:none;will-change:transform;z-index:51}
+.grabber{display:block;width:36px;height:5px;border-radius:3px;background:rgba(60,60,67,.3);margin:6px auto 10px;cursor:grab}
+.sheet-nav a{font-stretch:100%;font-weight:600;font-size:1.35rem;letter-spacing:-.025em;border-top:.5px solid rgba(0,0,0,.1)}
+.sheet-nav{border-bottom:.5px solid rgba(0,0,0,.1)}
+.sheet-cv a{border-top:.5px solid rgba(0,0,0,.1)}
+.sheet-scroll{overflow-y:auto;max-height:calc(88vh - 30px);touch-action:pan-y;overscroll-behavior:contain}
+
+@media (max-width:760px){
+  .sec{border-radius:22px;padding:26px 20px}
+  .sec > h2{font-size:1.85rem}
+  .mast{padding-top:48px}
+  h1{font-size:clamp(2.4rem,11vw,3.4rem)}
+}
+
+/* ---------- accessibility settings ---------- */
+@media (prefers-reduced-motion:reduce){
+  .lens::before{transition:none}
+  .dl[open] .dl-menu{animation:fade .15s ease both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+}
+@media (prefers-reduced-transparency:reduce){
+  .topbar,.sheet,.dl-menu,#city-results{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  .topbar,.sheet,.dl-menu{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 0 0 1px #000}
+  .sec{box-shadow:0 0 0 1px #000}
+  .graphite,.lede-sub,.when,.org{color:#3a3a3c}
+}
+@media print{
+  .sec{box-shadow:none;border-radius:0;background:none;padding:2pt 0 1pt 94pt}
+  .sec > h2{font-size:10.5pt;letter-spacing:0;margin:0}
+}
 </style>
 </head>
 <body>
@@ -645,7 +802,10 @@ html[data-view="cv"] .subhead{display:none}
 </header>
 
 <!-- mobile menu sheet (below 760px) -->
+<div class="scrim" id="scrim" aria-hidden="true"></div>
 <div class="sheet" id="menu-sheet" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <span class="grabber" id="grabber" aria-hidden="true"></span>
+  <div class="sheet-scroll" id="sheet-scroll">
   <nav class="sheet-nav" id="sheet-nav" aria-label="Sections"></nav>
   <div class="sheet-block">
     <p class="sheet-label">Show this page for</p>
@@ -659,6 +819,7 @@ html[data-view="cv"] .subhead{display:none}
     <div class="sheet-cv" data-dl-menu></div>
   </div>
   <p class="sheet-contact"><a href="mailto:mateuszploszajmazurek@gmail.com">mateuszploszajmazurek@gmail.com</a></p>
+  </div>
 </div>
 
 <!-- menu template: copied into every .dl-menu by the script -->
@@ -1731,22 +1892,87 @@ var sheet = $("menu-sheet"), menuBtn = $("menu-btn");
 function buildSheetNav(view) {
   $("sheet-nav").innerHTML = NAV[view].map(function (n) { return '<a href="#' + n[0] + '">' + n[1] + "</a>"; }).join("");
 }
+/* Spring sheet. Damping ratio + response (Apple's parameters), integrated
+   per frame from the CURRENT value and velocity, so any gesture can grab
+   it mid-flight and it never jumps. */
+var scrim = $("scrim"), sy = 0, sv = 0, target = 0, raf = 0, sheetH = 0, onRest = null;
+function sheetHeight() { return sheet.getBoundingClientRect().height || window.innerHeight * 0.8; }
+function paint() {
+  sheet.style.transform = "translate3d(0," + sy.toFixed(2) + "px,0)";
+  var p = sheetH ? 1 - Math.min(1, Math.max(0, sy / sheetH)) : 0;
+  scrim.style.opacity = p; scrim.style.pointerEvents = p > 0.05 ? "auto" : "none";
+}
+function springTo(to, opts, done) {
+  opts = opts || {}; target = to; onRest = done || null;
+  if (typeof opts.velocity === "number") sv = opts.velocity;
+  var zeta = opts.damping == null ? 1 : opts.damping, T = opts.response || 0.38;
+  var k = Math.pow(2 * Math.PI / T, 2), c = 4 * Math.PI * zeta / T, last = performance.now();
+  cancelAnimationFrame(raf);
+  if (REDUCE) { sy = to; sv = 0; paint(); if (onRest) onRest(); return; }
+  (function step(now) {
+    var dt = Math.min(0.032, (now - last) / 1000); last = now;
+    var n = 4; for (var i = 0; i < n; i++) { var a = -k * (sy - target) - c * sv; sv += a * dt / n; sy += sv * dt / n; }
+    paint();
+    if (Math.abs(sv) < 2 && Math.abs(sy - target) < 0.5) { sy = target; sv = 0; paint(); if (onRest) onRest(); return; }
+    raf = requestAnimationFrame(step);
+  })(last);
+}
 function openSheet() {
+  var wasHidden = sheet.hidden;
   sheet.hidden = false;
+  sheetH = sheetHeight();
+  if (wasHidden) { sy = sheetH; sv = 0; paint(); }
   menuBtn.setAttribute("aria-expanded", "true");
   menuBtn.querySelector(".menu-ico").nextSibling.textContent = "Close";
   html.classList.add("sheet-open");
+  springTo(0, { damping: 1, response: 0.38 });
   var first = sheet.querySelector("a, button");
-  if (first) first.focus();
+  if (first) first.focus({ preventScroll: true });
 }
-function closeSheet(returnFocus) {
+function closeSheet(returnFocus, velocity) {
   if (sheet.hidden) return;
-  sheet.hidden = true;
   menuBtn.setAttribute("aria-expanded", "false");
   menuBtn.querySelector(".menu-ico").nextSibling.textContent = "Menu";
   html.classList.remove("sheet-open");
+  sheetH = sheetHeight();
+  springTo(sheetH, { damping: 1, response: 0.32, velocity: velocity }, function () { sheet.hidden = true; });
   if (returnFocus) menuBtn.focus();
 }
+scrim.addEventListener("click", function () { closeSheet(true); });
+
+/* drag: 1:1 from the grab point, rubber-band above the top, velocity
+   projection on release (Apple's decay formula) decides close vs stay. */
+(function () {
+  var dragging = false, startY = 0, startSy = 0, hist = [];
+  function rubber(o, d) { return (o * d * 0.55) / (d + 0.55 * Math.abs(o)); }
+  function down(e) {
+    var scroller = $("sheet-scroll");
+    if (e.target.closest("a,button,input") && e.target !== $("grabber")) return;
+    if (scroller.scrollTop > 0 && !e.target.closest("#grabber")) return;
+    dragging = true; cancelAnimationFrame(raf);
+    startY = e.clientY; startSy = sy; hist = [[e.timeStamp, e.clientY]];
+    sheet.setPointerCapture(e.pointerId);
+  }
+  function move(e) {
+    if (!dragging) return;
+    var raw = startSy + (e.clientY - startY);
+    sy = raw < 0 ? -rubber(-raw, sheetH) : raw;
+    hist.push([e.timeStamp, e.clientY]); if (hist.length > 6) hist.shift();
+    paint();
+  }
+  function up() {
+    if (!dragging) return; dragging = false;
+    var a = hist[0], b = hist[hist.length - 1], dt = (b[0] - a[0]) / 1000;
+    var v = dt > 0 ? (b[1] - a[1]) / dt : 0;           /* px/s, positive = down */
+    var projected = sy + (v / 1000) * 0.998 / (1 - 0.998);
+    if (projected > sheetH * 0.5) closeSheet(false, v);
+    else springTo(0, { damping: v < -50 ? 0.8 : 1, response: 0.32, velocity: v });
+  }
+  sheet.addEventListener("pointerdown", down);
+  sheet.addEventListener("pointermove", move);
+  sheet.addEventListener("pointerup", up);
+  sheet.addEventListener("pointercancel", up);
+})();
 menuBtn.addEventListener("click", function () { sheet.hidden ? openSheet() : closeSheet(true); });
 sheet.addEventListener("click", function (e) {
   var a = e.target.closest("a");
@@ -2012,6 +2238,7 @@ function drawBackdrop() {
 var ticking = false;
 function onScroll() {
   ticking = false;
+  html.classList.toggle("scrolled", window.scrollY > 8);
   var max = document.documentElement.scrollHeight - window.innerHeight;
   var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
   $("tb-fill").style.width = (p * 100) + "%";

@@ -1,4 +1,7 @@
+# Note: crawlers read robots.txt only at the domain root (curiosit.github.io/robots.txt),
+# so this file has no effect while the site lives under /Curiosit/. Submit the sitemap
+# in Google Search Console instead.
 User-agent: *
 Allow: /
 
-Sitemap: https://curiosit.github.io/sitemap.xml
+Sitemap: https://curiosit.github.io/Curiosit/sitemap.xml

@@ -8,22 +8,24 @@
 <meta property="og:title" content="Mateusz Płoszaj-Mazurek">
 <meta property="og:description" content="Building researcher: daylight, building regulation, computational design.">
 <meta property="og:type" content="profile">
-<meta property="og:image" content="https://curiosit.github.io/og-research.png">
+<meta property="og:image" content="https://curiosit.github.io/Curiosit/og-research.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mateusz Płoszaj-Mazurek, building researcher, with a sun-path diagram for Warsaw">
-<meta property="og:url" content="https://curiosit.github.io/">
+<meta property="og:url" content="https://curiosit.github.io/Curiosit/">
 <meta property="og:site_name" content="Mateusz Płoszaj-Mazurek">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://curiosit.github.io/og-research.png">
-<link rel="canonical" href="https://curiosit.github.io/">
+<meta name="twitter:image" content="https://curiosit.github.io/Curiosit/og-research.png">
+<link rel="canonical" href="https://curiosit.github.io/Curiosit/">
 <link rel="icon" href="favicon.ico?v=2" sizes="any">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png?v=2" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
-<meta name="theme-color" content="#EDEEF1">
-<!-- SITE URL: every absolute link in this repo uses https://curiosit.github.io.
+<meta name="theme-color" content="#F5F5F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<!-- SITE URL: every absolute link in this repo uses https://curiosit.github.io/Curiosit/
      If the site moves to a custom domain, find-and-replace that string in all files. -->
 <script>
 /* View is set before first paint so nothing flashes. */
@@ -32,7 +34,7 @@
   var VIEWS = ["research", "aie", "cv"];
   /* public CV versions: general, research, computational-designer
      unlisted versions for applications: product-engineer, research-engineer, domain-expert */
-  var ROLES = ["general", "research", "computational-designer", "product-engineer", "research-engineer", "domain-expert"];
+  var ROLES = ["general", "research", "computational-designer", "product-engineer", "research-engineer", "domain-expert", "bim-automation", "simulation-scientist", "science-data-expert"];
   var v = q.get("for"), r = q.get("role");
   var h = document.documentElement;
   h.setAttribute("data-view", VIEWS.indexOf(v) > -1 ? v : "research");
@@ -44,10 +46,8 @@
   }
 })();
 </script>
-<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin data-roles="general research">
 <!-- ANALYTICS (cookieless). Uncomment ONE of these after creating the account.
-<script defer data-domain="curiosit.github.io" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="curiosit.github.io/Curiosit" src="https://plausible.io/js/script.js"></script>
 <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 -->
 
@@ -63,7 +63,9 @@
       "jobTitle": "Building researcher",
       "affiliation": { "@type": "CollegeOrUniversity", "name": "Warsaw University of Technology, Faculty of Architecture" },
       "alumniOf": ["Aalborg University", "Warsaw University of Technology"],
-      "knowsAbout": ["daylight simulation", "climate-based daylight modelling", "building regulation", "insolation", "surrogate models", "parametric design", "Grasshopper", "building carbon footprint", "machine learning"],
+      "knowsAbout": ["daylight simulation", "climate-based daylight modelling", "building regulation", "insolation", "surrogate models", "parametric design", "Grasshopper", "Rhino.Inside.Revit", "BIM", "building carbon footprint", "machine learning"],
+      "knowsLanguage": ["pl", "en", "da", "zh"],
+      "url": "https://curiosit.github.io/Curiosit/",
       "sameAs": ["https://github.com/Curiosit", "https://www.linkedin.com/in/mateusz-mazurek/", "https://scholar.google.com/citations?user=yFWVSDIAAAAJ", "https://orcid.org/0000-0002-4618-7849"],
       "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0002-4618-7849" },
       "award": ["Best Mashup Project, AEC Hackathon Copenhagen 2024", "Rector's team award for teaching achievements, Warsaw University of Technology, 2023", "Distinction for the doctoral thesis, Innowator Mazowsza, 2022", "PLGBC Green Building Awards 2022"]
@@ -118,6 +120,7 @@ a{color:inherit;text-decoration-color:rgba(38,90,110,.45);text-underline-offset:
 a:hover{color:var(--shade);text-decoration-color:var(--shade)}
 a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--shade);outline-offset:3px}
 img{max-width:100%}
+.is-empty{display:none !important}
 .sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .todo{background:#fff1c9;outline:1px dashed var(--sun-ink);padding:0 3px}
 
@@ -133,7 +136,10 @@ html[data-view="cv"][data-role="research"]               [data-roles]:not([data-
 html[data-view="cv"][data-role="computational-designer"] [data-roles]:not([data-roles~="computational-designer"]),
 html[data-view="cv"][data-role="product-engineer"]       [data-roles]:not([data-roles~="product-engineer"]),
 html[data-view="cv"][data-role="research-engineer"]      [data-roles]:not([data-roles~="research-engineer"]),
-html[data-view="cv"][data-role="domain-expert"]          [data-roles]:not([data-roles~="domain-expert"]){display:none !important}
+html[data-view="cv"][data-role="domain-expert"]          [data-roles]:not([data-roles~="domain-expert"]),
+html[data-view="cv"][data-role="bim-automation"] [data-roles]:not([data-roles~="bim-automation"]),
+html[data-view="cv"][data-role="simulation-scientist"] [data-roles]:not([data-roles~="simulation-scientist"]),
+html[data-view="cv"][data-role="science-data-expert"] [data-roles]:not([data-roles~="science-data-expert"]){display:none !important}
 
 /* ================================================================
    BACKDROP: sun-path diagram (research view only)
@@ -496,6 +502,50 @@ html[data-view="cv"][data-role="research-engineer"] #experience{order:4}
 html[data-view="cv"][data-role="domain-expert"] #publications{order:2}
 html[data-view="cv"][data-role="domain-expert"] #projects{order:3}
 
+
+/* application versions, unlisted */
+html[data-view="cv"][data-role="bim-automation"] #experience{order:1}
+html[data-view="cv"][data-role="bim-automation"] #projects{order:2}
+html[data-view="cv"][data-role="bim-automation"] #skills{order:3}
+html[data-view="cv"][data-role="bim-automation"] #teaching{order:4}
+html[data-view="cv"][data-role="bim-automation"] #education{order:5}
+html[data-view="cv"][data-role="bim-automation"] #awards{order:6}
+html[data-view="cv"][data-role="bim-automation"] #publications{order:7}
+html[data-view="cv"][data-role="bim-automation"] #talks{order:8}
+html[data-view="cv"][data-role="bim-automation"] #service{order:9}
+html[data-view="cv"][data-role="bim-automation"] #p-enxess{order:-3}
+html[data-view="cv"][data-role="bim-automation"] #p-goeko{order:-2}
+html[data-view="cv"][data-role="bim-automation"] #sk-cd{order:-3}
+html[data-view="cv"][data-role="bim-automation"] #sk-code{order:-2}
+html[data-view="cv"][data-role="bim-automation"] #t-ibim{order:-2}
+html[data-view="cv"][data-role="simulation-scientist"] #projects{order:1}
+html[data-view="cv"][data-role="simulation-scientist"] #publications{order:2}
+html[data-view="cv"][data-role="simulation-scientist"] #experience{order:3}
+html[data-view="cv"][data-role="simulation-scientist"] #skills{order:4}
+html[data-view="cv"][data-role="simulation-scientist"] #awards{order:5}
+html[data-view="cv"][data-role="simulation-scientist"] #service{order:6}
+html[data-view="cv"][data-role="simulation-scientist"] #education{order:7}
+html[data-view="cv"][data-role="simulation-scientist"] #teaching{order:8}
+html[data-view="cv"][data-role="simulation-scientist"] #talks{order:9}
+html[data-view="cv"][data-role="simulation-scientist"] #p-omegaflux{order:-3}
+html[data-view="cv"][data-role="simulation-scientist"] #p-optim{order:-2}
+html[data-view="cv"][data-role="simulation-scientist"] #pub-omega{order:-3}
+html[data-view="cv"][data-role="simulation-scientist"] #pub-energies2020{order:-2}
+html[data-view="cv"][data-role="simulation-scientist"] #sk-methods{order:-3}
+html[data-view="cv"][data-role="science-data-expert"] #projects{order:1}
+html[data-view="cv"][data-role="science-data-expert"] #publications{order:2}
+html[data-view="cv"][data-role="science-data-expert"] #service{order:3}
+html[data-view="cv"][data-role="science-data-expert"] #experience{order:4}
+html[data-view="cv"][data-role="science-data-expert"] #teaching{order:5}
+html[data-view="cv"][data-role="science-data-expert"] #education{order:6}
+html[data-view="cv"][data-role="science-data-expert"] #skills{order:7}
+html[data-view="cv"][data-role="science-data-expert"] #awards{order:8}
+html[data-view="cv"][data-role="science-data-expert"] #talks{order:9}
+html[data-view="cv"][data-role="science-data-expert"] #p-llm{order:-2}
+html[data-view="cv"][data-role="science-data-expert"] #pub-llm{order:-3}
+html[data-view="cv"][data-role="science-data-expert"] #sk-methods{order:-3}
+html[data-view="cv"][data-role="science-data-expert"] #sk-domain{order:-2}
+
 /* order inside lists */
 html[data-view="cv"][data-role="domain-expert"] #x-bjerg{order:-2}
 html[data-view="cv"][data-role="research-engineer"] #p-omegaflux{order:-2}
@@ -592,6 +642,283 @@ html[data-view="cv"] .subhead{display:none}
   html[data-view="cv"] .mast{padding:0 0 6pt}
   html[data-view="cv"] h1{font-size:22pt;margin:0 0 3pt}
 }
+
+/* ================================================================
+   APPLE-DESIGN VARIANT — overrides only. Everything above is the
+   original page; this block changes the design language:
+   system type with size-specific tracking, light materials,
+   card surfaces, a sliding segmented control, press feedback,
+   materializing popovers and a spring-driven bottom sheet.
+   ================================================================ */
+:root{
+  --paper:#F5F5F7; --paper-deep:#E8E8ED; --ink:#1D1D1F; --graphite:#6E6E73;
+  --shade:#0B6E8A; --rule:rgba(0,0,0,.08); --surface:#FFFFFF;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  --r-lg:28px; --r-md:18px; --r-sm:12px;
+  --spring:linear(0,.009,.035 2.1%,.141 4.4%,.723 15.5%,.938 22.2%,1.017 29.7%,1.03 34%,1.018 41.5%,.997 55.5%,1);
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+}
+body{font-size:17px;line-height:1.47;letter-spacing:-.022em;font-feature-settings:normal;-webkit-font-smoothing:antialiased}
+p,li{letter-spacing:-.016em}
+a{text-decoration:none;color:var(--shade)}
+a:hover{text-decoration:underline;text-decoration-thickness:1px}
+.lede,.lede-sub,.sec-body p,.rows h3,.pubs .t{color:var(--ink)}
+
+/* type scale: tighter tracking and leading as size grows */
+h1{font-weight:700;font-stretch:100%;font-size:clamp(2.8rem,7vw,5.25rem);line-height:1.02;letter-spacing:-.035em;max-width:14ch}
+.kicker{font-size:19px;font-weight:600;color:var(--sun-ink);letter-spacing:-.01em}
+.lede{font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.3;letter-spacing:-.022em;font-weight:500}
+.lede-sub{font-size:17px;color:var(--graphite)}
+.acro{font-size:clamp(2.6rem,6.4vw,4.6rem);letter-spacing:-.04em;font-weight:700}
+.acro span:not(.sr-only){font-stretch:100%;color:rgba(29,29,31,.22)}
+.acro span b{font-stretch:100%;color:var(--ink)}
+.acro.is-open span:not(.sr-only){color:var(--ink)}
+h3{font-weight:600;letter-spacing:-.02em}
+.hl-key{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:-.025em;color:var(--ink);font-stretch:100%}
+
+/* ---------- top bar: translucent material, scroll-edge shadow, no border ---------- */
+.topbar{background:rgba(245,245,247,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:0;transition:box-shadow .3s}
+html.scrolled .topbar{box-shadow:0 1px 0 rgba(0,0,0,.06),0 8px 24px -16px rgba(0,0,0,.25)}
+.tb-inner{height:52px;max-width:1080px}
+.tb-name,.sheet-nav a,.sheet-cv a,.dl-menu a{color:var(--ink)}
+.tb-name{font-stretch:100%;font-weight:600;font-size:16px;letter-spacing:-.02em}
+.tb-nav a{font-size:13px;color:var(--ink);opacity:.8;letter-spacing:-.01em}
+.tb-nav a:hover{opacity:1;text-decoration:none}
+.tb-sun{height:2px;bottom:0}
+.tb-dot{box-shadow:0 0 0 3px rgba(245,245,247,.9)}
+
+/* ---------- segmented control with a sliding thumb ---------- */
+.lens{position:relative;border:0;background:rgba(118,118,128,.12);padding:2px;border-radius:9px;isolation:isolate}
+.lens::before{content:"";position:absolute;z-index:-1;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);border-radius:7px;background:#fff;
+  box-shadow:0 3px 8px rgba(0,0,0,.12),0 3px 1px rgba(0,0,0,.04);transition:transform .45s var(--spring)}
+html[data-view="aie"] .lens::before{transform:translateX(100%)}
+.lens button{flex:1;border-radius:7px;font-size:13px;font-weight:500;padding:5px 16px;color:var(--ink);background:none!important;transition:transform .1s var(--ease-out)}
+.lens button[aria-checked="true"]{color:var(--ink);font-weight:600}
+
+/* ---------- press feedback on everything pressable ---------- */
+.dl-btn,.chip,.print-btn,.menu-btn,.lens button,.ask{transition:transform .1s var(--ease-out),background-color .2s}
+.dl-btn:active,.chip:active,.print-btn:active,.menu-btn:active,.lens button:active{transform:scale(.96)}
+.dl-btn{background:var(--ink);color:#fff;font-weight:600;font-size:15px;letter-spacing:-.01em;padding:11px 20px}
+.dl-btn:hover{text-decoration:none;background:#000}
+.dl[open] .dl-btn{background:var(--ink)}
+.chip{border:0;background:rgba(118,118,128,.12);font-weight:500}
+.chip:hover{background:rgba(118,118,128,.2);color:var(--ink)}
+.print-btn,.menu-btn{border:0;background:rgba(118,118,128,.12);color:var(--ink);font-weight:600}
+.menu-btn[aria-expanded="true"]{background:var(--ink);color:#fff}
+.dl-compact .dl-btn{background:var(--sun);color:var(--ink)}
+
+/* ---------- popover: anchored to its button, materializes ---------- */
+.dl-menu{border:0;border-radius:var(--r-sm);padding:6px;background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);
+  box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 20px 50px -12px rgba(0,0,0,.28);transform-origin:top left}
+.dl-compact .dl-menu{transform-origin:top right}
+.dl[open] .dl-menu{animation:materialize .32s var(--spring) both}
+@keyframes materialize{from{opacity:0;transform:scale(.92) translateY(-6px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.dl-menu a{border-radius:8px}
+.dl-menu a:hover{background:rgba(0,0,0,.05);text-decoration:none}
+
+/* ---------- layout: single column, sections as cards ---------- */
+.wrap{max-width:1080px}
+.mast{padding:84px 0 40px}
+.portrait{width:120px;height:120px;filter:none;box-shadow:0 10px 30px -10px rgba(0,0,0,.35)}
+.flow{gap:20px;padding-bottom:20px}
+.sec{display:block;background:var(--surface);border:0;border-radius:var(--r-lg);padding:clamp(28px,5vw,56px);
+  box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.sec > h2{position:static;font-stretch:100%;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.08;letter-spacing:-.03em;font-weight:700;margin:0 0 28px}
+.sec-body{max-width:68ch}
+.sec-body.wide{max-width:none}
+.subhead{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--graphite);margin:34px 0 4px}
+.rows > li,.pubs li{border-top:.5px solid rgba(0,0,0,.1)}
+.when{font-size:13px}
+.tag,.status{font-size:11.5px;letter-spacing:0;border:0;background:rgba(118,118,128,.12);color:var(--graphite);padding:1px 8px}
+.status{background:rgba(11,110,138,.1);color:var(--shade)}
+.cites{color:var(--sun-ink)}
+.badge{border:0;background:rgba(118,118,128,.12)}
+.collab{border-left:0;padding:0}
+.collab p:first-child{font-size:1.35rem;line-height:1.35;letter-spacing:-.022em;font-weight:500}
+.svc{border-bottom:.5px solid rgba(0,0,0,.1);grid-template-columns:2.4em 1fr}
+.svc-mark{font-stretch:100%;font-weight:700;color:var(--sun)}
+.svc h3{font-size:1.35rem}
+.teach-stats b{font-stretch:100%;font-weight:700;font-size:2.6rem;letter-spacing:-.04em}
+
+/* sun band and node canvas as inset panels */
+.sunband{border:0;background:var(--surface);border-radius:var(--r-lg);padding:clamp(24px,4vw,44px);margin:0 0 20px}
+.sb-say{font-size:1.25rem;letter-spacing:-.02em;line-height:1.4}
+.sb-say strong{background:none;color:var(--sun-ink)}
+#city-input{border:0;background:rgba(118,118,128,.12);border-radius:10px;font-size:15px;padding:9px 14px}
+#city-input:focus{outline:none;box-shadow:0 0 0 4px rgba(11,110,138,.25)}
+#city-results{border:0;border-radius:var(--r-sm);background:rgba(255,255,255,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 20px 50px -12px rgba(0,0,0,.28)}
+#city-results li:hover,#city-results li.is-cursor{background:var(--shade)}
+.gh{border-radius:var(--r-lg)}
+.node,.comp,.preview,.panel{border-radius:10px}
+
+/* media: rounded, softly lifted */
+.hero-media,.hl-fig,.svc-fig{border:0;border-radius:var(--r-md);box-shadow:0 0 0 .5px rgba(0,0,0,.08),0 18px 40px -22px rgba(0,0,0,.35)}
+.hl-fig figcaption,.svc-fig figcaption{border-top:.5px solid rgba(0,0,0,.08);font-size:12.5px}
+.hero-card{gap:40px}
+
+#bg svg{opacity:.18}
+.gh-note{margin:12px 0 26px}
+footer{border-top:0;font-size:12px}
+
+/* ---------- mobile: spring bottom sheet with grabber and scrim ---------- */
+.scrim{position:fixed;inset:0;z-index:48;background:rgba(0,0,0,.32);opacity:0;pointer-events:none}
+.sheet{top:auto;bottom:0;left:0;right:0;max-height:88vh;border-radius:22px 22px 0 0;
+  background:rgba(250,250,252,.86);backdrop-filter:saturate(180%) blur(28px);-webkit-backdrop-filter:saturate(180%) blur(28px);
+  box-shadow:0 -10px 40px -10px rgba(0,0,0,.25);padding-top:4px;touch-action:none;will-change:transform;z-index:51}
+.grabber{display:block;width:36px;height:5px;border-radius:3px;background:rgba(60,60,67,.3);margin:6px auto 10px;cursor:grab}
+.sheet-nav a{font-stretch:100%;font-weight:600;font-size:1.35rem;letter-spacing:-.025em;border-top:.5px solid rgba(0,0,0,.1)}
+.sheet-nav{border-bottom:.5px solid rgba(0,0,0,.1)}
+.sheet-cv a{border-top:.5px solid rgba(0,0,0,.1)}
+.sheet-scroll{overflow-y:auto;max-height:calc(88vh - 30px);touch-action:pan-y;overscroll-behavior:contain}
+
+@media (max-width:760px){
+  .sec{border-radius:22px;padding:26px 20px}
+  .sec > h2{font-size:1.85rem}
+  .mast{padding-top:48px}
+  h1{font-size:clamp(2.4rem,11vw,3.4rem)}
+}
+
+/* ---------- accessibility settings ---------- */
+@media (prefers-reduced-motion:reduce){
+  .lens::before{transition:none}
+  .dl[open] .dl-menu{animation:fade .15s ease both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+}
+@media (prefers-reduced-transparency:reduce){
+  .topbar,.sheet,.dl-menu,#city-results{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  .topbar,.sheet,.dl-menu{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 0 0 1px #000}
+  .sec{box-shadow:0 0 0 1px #000}
+  .graphite,.lede-sub,.when,.org{color:#3a3a3c}
+}
+@media print{
+  .sec{box-shadow:none;border-radius:0;background:none;padding:2pt 0 1pt 94pt}
+  .sec > h2{font-size:10.5pt;letter-spacing:0;margin:0}
+}
+
+/* ================================================================
+   DARK APPEARANCE — follows the system setting.
+   Figures and the node canvas stay light on purpose: they are
+   images of tools, shown as they look in the tool.
+   ================================================================ */
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#000; --paper-deep:#1C1C1E; --surface:#1C1C1E; --ink:#F5F5F7; --graphite:#98989D;
+    --shade:#64D2FF; --sun-ink:#F2B544; --rule:rgba(255,255,255,.14); color-scheme:dark;
+  }
+  body{background:var(--paper)}
+  .topbar{background:rgba(22,22,24,.72)}
+  html.scrolled .topbar{box-shadow:0 1px 0 rgba(255,255,255,.08),0 8px 24px -16px rgba(0,0,0,.8)}
+  .tb-dot{box-shadow:0 0 0 3px rgba(0,0,0,.9)}
+  .lens{background:rgba(118,118,128,.24)}
+  .lens::before{background:#636366;box-shadow:0 3px 8px rgba(0,0,0,.4)}
+  .dl-btn,.dl[open] .dl-btn{background:#F5F5F7;color:#000}
+  .dl-btn:hover{background:#fff}
+  .dl-compact .dl-btn{background:var(--sun);color:#000}
+  .chip,.print-btn,.menu-btn,.tag,.badge,#city-input{background:rgba(118,118,128,.24);color:var(--ink)}
+  .menu-btn[aria-expanded="true"]{background:#F5F5F7;color:#000}
+  .status{background:rgba(100,210,255,.14)}
+  .dl-menu,#city-results{background:rgba(44,44,46,.86);box-shadow:0 0 0 .5px rgba(255,255,255,.12),0 20px 50px -12px rgba(0,0,0,.7)}
+  .dl-menu a:hover{background:rgba(255,255,255,.08)}
+  .sheet{background:rgba(28,28,30,.88);box-shadow:0 -10px 40px -10px rgba(0,0,0,.8)}
+  .grabber{background:rgba(235,235,245,.3)}
+  .scrim{background:rgba(0,0,0,.55)}
+  .rows > li,.pubs li,.svc,.sheet-nav,.sheet-nav a,.sheet-cv a{border-color:rgba(255,255,255,.12)}
+  .sec,.sunband{box-shadow:none}
+  .acro span:not(.sr-only){color:rgba(245,245,247,.24)}
+  .acro.is-open span:not(.sr-only){color:var(--ink)}
+  .portrait{box-shadow:0 10px 30px -10px rgba(0,0,0,.9)}
+  .hl-fig figcaption,.svc-fig figcaption{background:var(--surface);color:var(--graphite);border-top-color:rgba(255,255,255,.1)}
+  .hero-media,.hl-fig,.svc-fig{box-shadow:0 0 0 .5px rgba(255,255,255,.12)}
+  .todo{background:#4a3b12;outline-color:var(--sun-ink);color:var(--ink)}
+  /* charts and the backdrop are drawn with fixed colours; recolour them */
+  .sunband svg [stroke="#13171C"],#bg svg [stroke="#13171C"]{stroke:#F5F5F7}
+  #bg svg [fill="#13171C"]{fill:#F5F5F7}
+  .sunband svg [stroke="#265A6E"],#bg svg [stroke="#265A6E"]{stroke:#64D2FF}
+  .sunband svg text,#bg svg text{fill:#98989D}
+  .sunband svg [stroke="#EDEEF1"]{stroke:#1C1C1E}
+  .sunband svg [fill="#265A6E"]{fill:#64D2FF}
+  #bg svg{opacity:.28}
+  .gh{--ink:#1D1D1F;--graphite:#6E6E73;--shade:#0B6E8A;color:#1D1D1F;color-scheme:light}
+  .gh .node,.gh .panel,.gh .preview{color:#1D1D1F}
+}
+@media (prefers-color-scheme: dark) and (prefers-contrast: more){
+  .topbar,.sheet,.dl-menu{background:#000;box-shadow:0 0 0 1px #fff}
+  .sec{box-shadow:0 0 0 1px #fff}
+}
+@media print{:root{--display:"Archivo","Helvetica Neue",Arial,sans-serif;--body:"Source Serif 4",Georgia,serif;--paper:#fff;--paper-deep:#fff;--surface:#fff;--ink:#000;--graphite:#444;--shade:#000;--sun-ink:#000;color-scheme:light}}
+
+/* per-version trims, print only */
+@media print{
+  html[data-view="cv"][data-role="research"] #sk-code,
+  html[data-view="cv"][data-role="research"] #sk-cd,
+  html[data-view="cv"][data-role="research"] #sk-methods,
+  .scrim,.sheet,#menu-sheet,
+  html[data-view="cv"][data-role="product-engineer"] #service{display:none !important}
+}
+@media print{html,body{height:auto !important;min-height:0 !important}.wrap,main.flow{padding-bottom:0 !important;margin-bottom:0 !important}}
+/* Print, restated after the design-variant and dark rules so the CV PDF
+   keeps its compact layout whatever the screen styles say. */
+@media print{
+  body{letter-spacing:0;-webkit-font-smoothing:auto}
+  h1{font-weight:800;letter-spacing:-.01em;max-width:none;line-height:1.05}
+  .lede,.lede-sub{font-weight:400;letter-spacing:0;line-height:1.3;color:#000}
+  .headline{letter-spacing:0}
+  .sec{background:none;box-shadow:none;border-radius:0}
+  .sec > h2{line-height:1.25;letter-spacing:0;font-weight:700}
+  .subhead{text-transform:none;letter-spacing:0;font-size:9pt;margin:6pt 0 2pt}
+  .flow{gap:0;padding:0}
+  .mast{padding:0 0 6pt}
+  .portrait{box-shadow:none}
+  .rows > li,.pubs li{border-top:.5pt solid #ccc}
+  .tag,.status{background:none;border:.5pt solid #999;color:#333}
+
+  :root{padding:0}
+  body{font-size:8.5pt;line-height:1.24;background:#fff;color:#000}
+  .topbar,#bg,.sunband,.role-pick,footer,.no-print,#contact,.dl,.todo-li{display:none !important}
+  .wrap{max-width:none;padding:0}
+  .mast{padding:0 0 4pt;grid-template-columns:1fr auto;gap:14pt}
+  h1{font-size:22pt;margin:0 0 4pt}
+  .headline{font-size:11.5pt;margin:0 0 5pt;color:#000}
+  .lede,.lede-sub{font-size:9pt;max-width:none}
+  .portrait{width:58pt;height:58pt}
+  .sec{grid-template-columns:84pt 1fr;gap:10pt;padding:4pt 0;break-inside:auto}
+  .sec > h2{position:static;font-size:10.5pt}
+  h3,.rows h3{font-size:10pt;margin:0}
+  .rows .org,.pubs .v,.when,.cv-contact,.skills dt{font-size:8.5pt}
+  .rows p,.rows ul{margin-top:1pt}
+  .rows ul li{margin:1pt 0}
+  .rows .org{margin:0 0 2pt}
+  .status,.tag{font-size:7.5pt}
+  .sec-body{max-width:none}
+  .rows > li{grid-template-columns:58pt 1fr;gap:8pt;padding:4pt 0;break-inside:avoid}
+  .pubs li{padding:3pt 0;break-inside:avoid}
+  .skills div{grid-template-columns:96pt 1fr}
+  a{text-decoration:none;color:#000}
+  .print-url::after{content:" (" attr(href) ")";font-size:8pt;color:#444}
+  .print-url[href^="mailto"]::after{content:none}
+  .links{display:none}
+  .todo{background:none;outline:0}
+  html[data-view="cv"] .sec{padding:4pt 0}
+  .flow,.rows,.pubs,.skills{display:block !important}
+  html[data-view="cv"] .sec{display:block;position:relative;padding:1.5pt 0 0 94pt}
+  html[data-view="cv"] .talks > li{padding:1.5pt 0}
+  html[data-view="cv"] .talks h3{font-size:9pt;font-weight:600}
+  html[data-view="cv"] .talks .org{font-size:8.5pt}
+  html[data-view="cv"][data-role="computational-designer"] #education li:first-child p:not(.org){display:none}
+  html[data-view="cv"] .sec > h2{position:absolute;left:0;top:4pt;width:84pt;margin:0}
+  .skills div{margin-bottom:3pt}
+  .skills{gap:3pt}
+  html[data-view="cv"][data-role="general"] #service,
+  html[data-view="cv"][data-role="computational-designer"] #service,
+  html[data-view="cv"][data-role="computational-designer"] #service{display:none !important}
+  .rows ul li{line-height:1.28}
+  html[data-view="cv"] .mast{padding:0 0 6pt}
+  html[data-view="cv"] h1{font-size:22pt;margin:0 0 3pt}
+}
 </style>
 </head>
 <body>
@@ -645,7 +972,10 @@ html[data-view="cv"] .subhead{display:none}
 </header>
 
 <!-- mobile menu sheet (below 760px) -->
+<div class="scrim" id="scrim" aria-hidden="true"></div>
 <div class="sheet" id="menu-sheet" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <span class="grabber" id="grabber" aria-hidden="true"></span>
+  <div class="sheet-scroll" id="sheet-scroll">
   <nav class="sheet-nav" id="sheet-nav" aria-label="Sections"></nav>
   <div class="sheet-block">
     <p class="sheet-label">Show this page for</p>
@@ -659,6 +989,7 @@ html[data-view="cv"] .subhead{display:none}
     <div class="sheet-cv" data-dl-menu></div>
   </div>
   <p class="sheet-contact"><a href="mailto:mateuszploszajmazurek@gmail.com">mateuszploszajmazurek@gmail.com</a></p>
+  </div>
 </div>
 
 <!-- menu template: copied into every .dl-menu by the script -->
@@ -735,12 +1066,15 @@ html[data-view="cv"] .subhead{display:none}
       <p class="headline" data-roles="computational-designer">Computational designer · Grasshopper, simulation and BIM tooling · Architect, PhD</p>
       <p class="headline" data-roles="product-engineer">Product engineer for AEC software · Architect, PhD</p>
       <p class="headline" data-roles="research-engineer">Research engineer · Design optimization and surrogate models · Architect, PhD</p>
+      <p class="headline" data-roles="bim-automation">BIM and design automation · Revit, Rhino.Inside.Revit, Grasshopper, Python and C# · Architect, PhD</p>
+      <p class="headline" data-roles="simulation-scientist">Simulation and machine learning for the built environment · Daylight surrogates, Radiance, gradient boosting · Architect, PhD</p>
+      <p class="headline" data-roles="science-data-expert">Domain expert for AI evaluation · Building science, simulation and design workflows · Architect, PhD</p>
       <p class="headline" data-roles="domain-expert">Architect, PhD · Building regulation and performance · Evaluation for AEC AI</p>
 
       <p class="cv-contact">
         Warsaw, Poland · remote across time zones ·
         <a class="print-url" href="mailto:mateuszploszajmazurek@gmail.com">mateuszploszajmazurek@gmail.com</a>
-        <a class="print-url" href="https://github.com/Curiosit">github.com/Curiosit</a>
+        <a href="https://github.com/Curiosit">github.com/Curiosit</a>
       </p>
 
       <p class="lede-sub" data-roles="general">
@@ -770,6 +1104,27 @@ html[data-view="cv"] .subhead{display:none}
         My work covers multi-criteria building optimization, surrogate models validated against Radiance,
         and the benchmark design that decides whether a result is any good. PhD on parametric optimization and
         machine-learning methods for design; ten years of architectural practice behind the maths.
+      </p>
+      <p class="lede-sub" data-roles="bim-automation">
+        Architect with ten years of practice, from concept and permit documentation to site supervision, who has taught
+        Grasshopper for seven years, including Rhino.Inside.Revit and Python and C# scripting for practising architects and
+        engineers on the iBIM postgraduate programme since 2020. I build automation that design teams actually use:
+        Grasshopper definitions and plugins, IFC pipelines and web viewers, and data workflows between models and analysis
+        tools. Two years in a product team at One Click LCA, shipping features for architects.
+      </p>
+      <p class="lede-sub" data-roles="simulation-scientist">
+        I build machine-learning surrogates for building-physics simulation and the datasets behind them. OmegaFlux predicts
+        climate-based daylight point by point from room geometry, about 200 times faster than the Radiance simulations it was
+        trained on, and I report where it stops generalising as carefully as where it works. Earlier work combined parametric
+        optimization and convolutional neural networks for building carbon (Energies 2020, 130+ citations). Ten years of
+        architectural practice and a PhD in digital design methods mean I know which predictions a designer can use.
+      </p>
+      <p class="lede-sub" data-roles="science-data-expert">
+        I turn expert workflows into tasks, ground truth and quality criteria. In building science this has meant simulated
+        datasets with held-out validation (OmegaFlux), language-model workflows for building data (Journal of Building
+        Engineering 2026; Energies 2024), and 21 peer reviews for 9 journals, including Artificial Intelligence Review and
+        Scientific Reports. Ten years of architectural practice, a PhD in digital design methods, two years in an AEC software
+        product team, and 400+ students taught.
       </p>
       <p class="lede-sub" data-roles="domain-expert">
         Ten years of architectural practice in Denmark and Poland, from 100 m² houses to 15,000 m² schools and offices,
@@ -1049,14 +1404,14 @@ html[data-view="cv"] .subhead{display:none}
       <div class="sec-body">
         <ol class="rows" reversed>
           <li id="x-wut">
-            <span class="when">current</span><!-- TODO: start year -->
+            <span class="when">2017–now</span>
             <div>
               <h3>Researcher and lecturer</h3>
-              <p class="org">Faculty of Architecture, Warsaw University of Technology</p>
+              <p class="org">Faculty of Architecture, Warsaw University of Technology · doctoral candidate from 2017, academic staff since 2021</p>
               <ul>
                 <li>Daylight regulation, simulation and surrogate-model research; see publications.</li>
-                <li data-roles="general computational-designer product-engineer research">Teaches Grasshopper and multi-criteria building optimization; coordinates a lecture cycle on public buildings; runs a second-year design studio.</li>
-                <li data-roles="research-engineer domain-expert research">Designs parametric experiments and evaluation frameworks: thousands of simulated room variants, held-out test splits, convergence checks.</li>
+                <li data-roles="general computational-designer product-engineer research bim-automation science-data-expert">Teaches Grasshopper and multi-criteria building optimization (400+ students so far); coordinates a lecture cycle on public buildings; runs a second-year design studio.</li>
+                <li data-roles="research-engineer domain-expert research simulation-scientist science-data-expert">Designs parametric experiments and evaluation frameworks: thousands of simulated room variants, held-out test splits, convergence checks.</li>
               </ul>
             </div>
           </li>
@@ -1067,12 +1422,12 @@ html[data-view="cv"] .subhead{display:none}
               <p class="org">One Click LCA, Helsinki · remote</p>
               <ul>
                 <li>Built features for Carbon Designer 3D, an early-design tool for architects (TypeScript, React, Three.js, AG Grid).</li>
-                <li data-roles="general computational-designer product-engineer domain-expert research-engineer">Interim product owner in the second half of 2025; took the Free Drawing feature from specification to release.</li>
-                <li data-roles="general product-engineer domain-expert computational-designer">Wrote methodology specifications and brought in a paying customer.</li>
+                <li data-roles="general computational-designer product-engineer domain-expert research-engineer bim-automation simulation-scientist science-data-expert">Interim product owner in the second half of 2025; took the Free Drawing feature from specification to release.</li>
+                <li data-roles="general product-engineer domain-expert computational-designer bim-automation science-data-expert">Wrote methodology specifications and brought in a paying customer.</li>
               </ul>
             </div>
           </li>
-          <li id="x-enxess" data-roles="general product-engineer computational-designer">
+          <li id="x-enxess" data-roles="general product-engineer computational-designer bim-automation">
             <span class="when">2024</span>
             <div>
               <h3>Contract developer</h3>
@@ -1080,7 +1435,7 @@ html[data-view="cv"] .subhead{display:none}
               <p>Web viewer for IFC models of historical building objects (Three.js, React, TypeScript).</p>
             </div>
           </li>
-          <li id="x-slad" data-roles="general product-engineer computational-designer research-engineer">
+          <li id="x-slad" data-roles="general product-engineer computational-designer research-engineer bim-automation simulation-scientist">
             <span class="when">2023–2024</span>
             <div>
               <h3>Founder</h3>
@@ -1096,8 +1451,8 @@ html[data-view="cv"] .subhead{display:none}
               <ul>
                 <li>Single- and multi-family housing, schools, kindergartens and offices, from 100 m² to 15,000 m².</li>
                 <li>All design phases: concept, permit and construction documentation, and architectural supervision on site.</li>
-                <li data-roles="general domain-expert product-engineer computational-designer">Code compliance in practice under Danish and Polish regulations and Passive House certification; daylight simulation studies with VELUX.</li>
-                <li data-roles="general computational-designer product-engineer research">2022–2024: architecture, sustainability and software consultant, building in-house design tools; co-author of the Polish whole-life carbon roadmap.</li>
+                <li data-roles="general domain-expert product-engineer computational-designer bim-automation science-data-expert">Code compliance in practice under Danish and Polish regulations and Passive House certification; daylight simulation studies with VELUX.</li>
+                <li data-roles="general computational-designer product-engineer research bim-automation">2022–2024: architecture, sustainability and software consultant, building in-house design tools; co-author of the Polish whole-life carbon roadmap.</li>
               </ul>
             </div>
           </li>
@@ -1107,7 +1462,7 @@ html[data-view="cv"] .subhead{display:none}
 
     <!-- ============ CV: projects ============ -->
     <section class="sec" id="projects" data-for="cv">
-      <h2 data-roles="general research product-engineer research-engineer domain-expert">Selected projects</h2>
+      <h2 data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert">Selected projects</h2>
       <h2 data-roles="computational-designer">Commercial and tool work</h2>
       <div class="sec-body">
         <ol class="rows">
@@ -1115,17 +1470,17 @@ html[data-view="cv"] .subhead{display:none}
             <span class="when">2025–26</span>
             <div>
               <h3>OmegaFlux</h3>
-              <p>Per-point daylight prediction from geometric view descriptors with gradient-boosted trees, exported to ONNX and run in the browser. Dataset generation, held-out validation against Radiance, transfer to unseen room shapes. <a class="print-url" href="https://curiosit.github.io/OmegaFlux/">curiosit.github.io/OmegaFlux</a></p>
+              <p>Per-point daylight prediction from geometric view descriptors with gradient-boosted trees, exported to ONNX and run in the browser. Dataset generation, held-out validation against Radiance, transfer to unseen room shapes. <a href="https://curiosit.github.io/OmegaFlux/">curiosit.github.io/OmegaFlux</a></p>
             </div>
           </li>
-          <li id="p-freedraw" data-roles="general computational-designer product-engineer">
+          <li id="p-freedraw" data-roles="general computational-designer product-engineer bim-automation">
             <span class="when">2025</span>
             <div>
               <h3>Free Drawing, Carbon Designer 3D <span class="tag">One Click LCA</span></h3>
               <p>Led a feature letting architects sketch building massing directly in the browser, from user problem through specification to release.</p>
             </div>
           </li>
-          <li id="p-enxess" data-roles="computational-designer">
+          <li id="p-enxess" data-roles="computational-designer bim-automation">
             <span class="when">2024</span>
             <div>
               <h3>IFC viewer for historical building objects <span class="tag">client, Liechtenstein</span></h3>
@@ -1139,7 +1494,7 @@ html[data-view="cv"] .subhead{display:none}
               <p>Short commercial jobs including IFC-to-web implementation.</p>
             </div>
           </li>
-          <li id="p-bjergtools" data-roles="computational-designer">
+          <li id="p-bjergtools" data-roles="computational-designer bim-automation">
             <span class="when">2016–2024</span>
             <div>
               <h3>In-house design tools <span class="tag">Bjerg Arkitektur</span></h3>
@@ -1153,11 +1508,11 @@ html[data-view="cv"] .subhead{display:none}
               <p>Co-author, with Alicja Kuczera, of the national roadmap for decarbonising the built environment by 2050.</p>
             </div>
           </li>
-          <li id="p-goeko" data-roles="computational-designer product-engineer">
+          <li id="p-goeko" data-roles="computational-designer product-engineer bim-automation">
             <span class="when">2023–24</span>
             <div>
               <h3>goeko.gha: Ökobaudat in Grasshopper <span class="tag">open source</span></h3>
-              <p>Grasshopper plugin that reads environmental product declarations from the German Ökobaudat database through its API. MIT licence, published on Food4Rhino. <a class="print-url" href="https://github.com/Curiosit/goeko.gha">github.com/Curiosit/goeko.gha</a></p>
+              <p>Grasshopper plugin that reads environmental product declarations from the German Ökobaudat database through its API. MIT licence, published on Food4Rhino. <a href="https://github.com/Curiosit/goeko.gha">github.com/Curiosit/goeko.gha</a></p>
             </div>
           </li>
           <li id="p-shapediver" data-roles="computational-designer">
@@ -1167,21 +1522,21 @@ html[data-view="cv"] .subhead{display:none}
               <p>No-code web app built from a Grasshopper definition, loading material data from Ökobaudat through an API.</p>
             </div>
           </li>
-          <li id="p-hack" data-roles="general computational-designer product-engineer">
+          <li id="p-hack" data-roles="general computational-designer product-engineer bim-automation simulation-scientist">
             <span class="when">2023–24</span>
             <div>
               <h3>AEC Hackathons</h3>
               <p>Copenhagen 2023 (SpeckleLCA), Zurich 2024 (InfraWeb), Copenhagen 2024 (OpenDetail, Best Mashup Project).</p>
             </div>
           </li>
-          <li id="p-llm" data-roles="domain-expert research-engineer">
+          <li id="p-llm" data-roles="domain-expert research-engineer bim-automation simulation-scientist science-data-expert">
             <span class="when">2026</span>
             <div>
               <h3>Language models for IFC enrichment</h3>
               <p>Workflow using an LLM to enrich IFC data for reuse of large-panel building elements; published with code.</p>
             </div>
           </li>
-          <li id="p-optim" data-roles="research-engineer research">
+          <li id="p-optim" data-roles="research-engineer research simulation-scientist science-data-expert">
             <span class="when">2018–now</span>
             <div>
               <h3>Multi-criteria building optimization</h3>
@@ -1213,15 +1568,15 @@ html[data-view="cv"] .subhead{display:none}
             <span class="t">Green Data Centres: Sustainable Solutions with Green Energy and Green–Blue Infrastructure</span>
             <span class="v">M. Grochulska-Salak, E. Maciejewska, P. A. Bujak et al. · Energies 18(24), 6592 (2025) · <a href="https://doi.org/10.3390/en18246592">doi</a><span class="cites" data-cite="energies2025"></span></span>
           </li>
-          <li id="pub-energies2024" data-roles="general research product-engineer research-engineer domain-expert">
+          <li id="pub-energies2024" data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert">
             <span class="t">Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development</span>
             <span class="v">with E. Ryńska · Energies 17(12), 2997 (2024) · <a href="https://doi.org/10.3390/en17122997">doi</a><span class="cites" data-cite="energies2024"></span></span>
           </li>
-          <li id="pub-energies2020" data-roles="general research product-engineer research-engineer domain-expert">
+          <li id="pub-energies2020" data-roles="general research product-engineer research-engineer domain-expert simulation-scientist science-data-expert">
             <span class="t">Methods to Optimize Carbon Footprint of Buildings in Regenerative Architectural Design with the Use of Machine Learning, Convolutional Neural Network, and Parametric Design</span>
             <span class="v">with E. Ryńska and M. Grochulska-Salak · Energies 13(20), 5289 (2020) · <a href="https://doi.org/10.3390/en13205289">doi</a><span class="cites" data-cite="energies2020"></span></span>
           </li>
-          <li id="pub-builder2020" data-roles="research">
+          <li id="pub-builder2020" data-roles="research simulation-scientist">
             <span class="t">Machine Learning-Aided Architectural Design for Carbon Footprint Reduction</span>
             <span class="v">Builder 276 (7/2020), Builder Science, pp. 35–39 · <a href="https://doi.org/10.5604/01.3001.0014.1615">doi</a></span>
           </li>
@@ -1229,7 +1584,7 @@ html[data-view="cv"] .subhead{display:none}
 
         <p class="subhead">Books, chapters and reports</p>
         <ul class="pubs">
-          <li id="pub-phd" data-roles="research research-engineer domain-expert">
+          <li id="pub-phd" data-roles="research research-engineer domain-expert simulation-scientist science-data-expert">
             <span class="t">Digital methods of supporting architectural design process and the analysis of the carbon footprint of buildings</span>
             <span class="v">PhD thesis · Warsaw University of Technology (2022)<span class="cites" data-cite="phd"></span></span>
           </li>
@@ -1257,7 +1612,7 @@ html[data-view="cv"] .subhead{display:none}
 
         <p class="subhead">Conference papers and abstracts</p>
         <ul class="pubs">
-          <li id="pub-conf" data-roles="research research-engineer">
+          <li id="pub-conf" data-roles="research research-engineer science-data-expert">
             <span class="t">Prescriptive and Performance Based Daylighting Regulation as an Architectural Experiment: Parametric Simulation of Polish Residential Standards</span>
             <span class="v">Architecture of Challenges: Experiment in Space – the Space of Experiment, ed. A. M. Wierzbicka · Warsaw University of Technology (2026), pp. 160–161</span>
           </li>
@@ -1265,7 +1620,7 @@ html[data-view="cv"] .subhead{display:none}
             <span class="t">Implementing Building Energy Modelling in a Master's Level Architectural Design Course: Preliminary Insights from a Pilot Study</span>
             <span class="v">with M. Gołębiewski, M. Pierzchalski · Architecture of Challenges (2026), pp. 62–63</span>
           </li>
-          <li id="pub-poster" data-roles="research research-engineer domain-expert">
+          <li id="pub-poster" data-roles="research research-engineer domain-expert simulation-scientist science-data-expert">
             <span class="t">Predicting Daylight in Milliseconds: A Computational Machine Learning Surrogate Model for Early-Stage Urban Housing Design Simulation. Artificial Dataset Generation</span>
             <span class="v">Poster · Young Scientist Forum "200 Młodych na 200-lecie Politechniki Warszawskiej" (2026)</span>
           </li>
@@ -1273,11 +1628,11 @@ html[data-view="cv"] .subhead{display:none}
             <span class="t">Artificial intelligence for reducing carbon footprint of buildings. A comprehensive approach using convolutional neural networks and large language models in architectural design optimization</span>
             <span class="v">Redefining Cities in View of Climatic Changes 2023: Abstracts · Warsaw University of Technology (2023), pp. 96–97</span>
           </li>
-          <li id="pub-icsa" data-roles="research">
+          <li id="pub-icsa" data-roles="research simulation-scientist">
             <span class="t">Artificial intelligence and machine learning for low carbon architecture. Prototype carbon estimation tool development case study</span>
             <span class="v">Structures and Architecture. A Viable Urban Perspective?, eds P. J. S. Cruz, M. Frier Hvejsel · CRC Press (2022), vol. 2, pp. 345–346 · <a href="https://doi.org/10.1201/9781003023555-96">doi</a></span>
           </li>
-          <li id="pub-yrsb" data-roles="research">
+          <li id="pub-yrsb" data-roles="research simulation-scientist">
             <span class="t">Parametric Optimization of Carbon Footprint</span>
             <span class="v">YRSB19: iiSBE Forum of Young Researchers in Sustainable Building, Prague · Czech Technical University (2019), pp. 165–174</span>
           </li>
@@ -1289,7 +1644,7 @@ html[data-view="cv"] .subhead{display:none}
 
         <p class="subhead">Preprint with code</p>
         <ul class="pubs">
-          <li id="pub-omega" data-roles="general research research-engineer domain-expert">
+          <li id="pub-omega" data-roles="general research research-engineer domain-expert simulation-scientist science-data-expert">
             <span class="t">Analytic radiometric descriptors enable geometry-flexible per-sensor daylight prediction without learned spatial encodings</span><span class="status">preprint</span>
             <span class="v">SSRN (2026) · code <a href="https://github.com/Curiosit/OmegaFlux">github.com/Curiosit/OmegaFlux</a> · software <a href="https://doi.org/10.5281/zenodo.21781259">doi:10.5281/zenodo.21781259</a></span>
           </li>
@@ -1297,11 +1652,11 @@ html[data-view="cv"] .subhead{display:none}
 
         <p class="subhead">Built work and professional press</p>
         <ul class="pubs">
-          <li id="pub-solec" data-roles="general research domain-expert">
+          <li id="pub-solec" data-roles="general research domain-expert bim-automation">
             <span class="t">Akademik na Solcu, Warsaw</span>
             <span class="v">Project publication, with M. Czechowicz · Architektura-Murator 4/2025, pp. 54–64</span>
           </li>
-          <li id="pub-reguly" data-roles="general research domain-expert">
+          <li id="pub-reguly" data-roles="general research domain-expert bim-automation">
             <span class="t">Przedszkole pasywne, Reguły</span>
             <span class="v">Passive House kindergarten, project publication, with D. Sibińska, J. Sokołowski et al. · Architektura-Murator 5/2023, pp. 20–34</span>
           </li>
@@ -1348,9 +1703,9 @@ html[data-view="cv"] .subhead{display:none}
         <dl class="skills">
           <div id="sk-methods"><dt>Methods</dt><dd>Evolutionary and multi-objective optimization, surrogate modelling, gradient-boosted trees, dataset and validation design, parametric experiments</dd></div>
           <div id="sk-domain"><dt>Building domain</dt><dd>Climate-based daylight (sDA, ASE, UDI, EN 17037), insolation, Polish and Danish building regulations, Passive House, building carbon footprint</dd></div>
-          <div id="sk-cd"><dt>Design tools</dt><dd>Rhino and Grasshopper, Ladybug and Honeybee, Radiance, THERM, IFC and BIM, That Open Company tools</dd></div>
-          <div id="sk-code"><dt>Code</dt><dd>Python (NumPy, pandas, scikit-learn, XGBoost, ONNX), TypeScript, React, Three.js, Git, CI/CD</dd></div>
-          <div id="sk-lang"><dt>Languages</dt><dd>Polish (native), English (fluent)</dd></div>
+          <div id="sk-cd"><dt>Design tools</dt><dd>Rhino and Grasshopper, Rhino.Inside.Revit, Revit, ArchiCAD, Ladybug and Honeybee, Radiance, THERM, IFC, That Open Company tools</dd></div>
+          <div id="sk-code"><dt>Code</dt><dd>Python (NumPy, pandas, scikit-learn, XGBoost, ONNX), C#, TypeScript, React, Three.js, Git, CI/CD; daily AI-assisted development with Claude Code, including six months on a production codebase</dd></div>
+          <div id="sk-lang"><dt>Languages</dt><dd>Polish (native), English (fluent), Danish (communicative), Chinese (basic)</dd></div>
         </dl>
       </div>
     </section>
@@ -1377,10 +1732,13 @@ html[data-view="cv"] .subhead{display:none}
           <span><b data-stat="students"></b> students in Grasshopper courses</span>
           <span><b data-stat="peryear"></b> students a year in the introduction course alone</span>
         </p>
-        <p class="teach-intro" data-for="aie">The workshops I offer are built on the courses I teach at the university, from a first contact with Grasshopper to multi-criteria optimization of energy, daylight and carbon.</p>
+        <p class="teach-intro" data-for="aie">The workshops I offer are built on the courses I teach at the university and, since 2020, on the iBIM postgraduate programme for practising architects and engineers: from a first contact with Grasshopper to Rhino.Inside.Revit, scripting and multi-criteria optimization of energy, daylight and carbon.</p>
         <ul class="rows">
-          <li><span class="when">7 years</span><div><h3>Introduction to Grasshopper</h3><p>Parametric modelling and multi-criteria optimization of energy, daylight and carbon.</p><p class="org" data-for="aie">Warsaw University of Technology · about 40 students a year</p></div></li>
-          <li data-roles="research domain-expert research-engineer"><span class="when">ongoing</span><div><h3>Computing Architecture for Sustainable Environment</h3><p>Seminar for fourth- and fifth-year students, including daylight simulation.</p></div></li>
+          <li><span class="when">7 years</span><div><h3>Introduction to Grasshopper</h3><p>"Cyfrowe techniki geometryczne": parametric modelling and multi-criteria optimization of energy, daylight and carbon.</p><p class="org" data-for="aie">Warsaw University of Technology · about 40 students a year</p></div></li>
+          <li id="t-ibim" data-roles="general computational-designer product-engineer research domain-expert bim-automation science-data-expert"><span class="when">2020–</span><div><h3>iBIM postgraduate programme (Interdisciplinary BIM Studies)</h3><p>Introductory and advanced Grasshopper, environmental and daylight analysis with Rhino.Inside.Revit and Grasshopper, Python and C# scripting, for practising architects and engineers. Hybrid.</p></div></li>
+          <li id="t-sun" data-roles="research"><span class="when">2026–</span><div><h3>Sun, Daylight, and Architecture</h3><p>English-language course on the role of the sun and daylight in architectural and urban design, co-taught with Krystian Kwieciński.</p></div></li>
+          <li id="t-elective" data-roles="research"><span class="when">2026–</span><div><h3>Digital design in sustainable practice and research</h3><p>Elective seminar "Zastosowanie projektowania cyfrowego w zrównoważonej praktyce projektowej i badaniach naukowych".</p></div></li>
+          <li data-roles="research domain-expert research-engineer science-data-expert"><span class="when">ongoing</span><div><h3>Computing Architecture for Sustainable Environment</h3><p>Seminar for fourth- and fifth-year students, including daylight simulation.</p></div></li>
           <li data-roles="research product-engineer"><span class="when">ongoing</span><div><h3>Design studio and lecture cycle</h3><p>Second-year studio on small public architecture; coordinator of the semester-seven lectures on public buildings; English-language Solar Seminar.</p></div></li>
           <li data-for="research aie"><span class="when">2023</span><div><h3>Rector's team award for teaching</h3><p>Warsaw University of Technology, for teaching achievements in 2021/22.</p></div></li>
           <li data-for="aie"><span class="when">ongoing</span><div><h3>Teaching online</h3><p>Faculty classes run remotely, so workshops can be taught online as well as on site.</p></div></li>
@@ -1482,9 +1840,9 @@ html[data-view="cv"] .subhead{display:none}
             <p class="org">22nd Warsaw Art Fair (Warszawskie Targi Sztuki)</p></div>
           </li>
           <li data-for="research cv" data-roles="product-engineer research">
-            <span class="when">2025</span>
+            <span class="when">2025–26</span>
             <div><h3>Early-phase building carbon footprint optimization with Carbon Designer 3D <span class="tag">speaker</span></h3>
-            <p class="org">Carbon Experts Summit 2025</p></div>
+            <p class="org">Carbon Experts Summit, 2025 and 2026</p></div>
           </li>
           <li data-for="research cv" data-roles="research">
             <span class="when">2023</span>
@@ -1560,7 +1918,7 @@ html[data-view="cv"] .subhead{display:none}
       <h2 data-for="aie">Awards</h2>
       <div class="sec-body">
         <ul class="rows talks">
-          <li data-for="research cv" data-roles="research general">
+          <li data-for="research cv" data-roles="research general simulation-scientist science-data-expert">
             <span class="when">2024–25</span>
             <div><h3>Principal investigator, IDUB research grant <span class="tag">completed</span></h3>
             <p class="org">Circular economy in architecture: reuse of prefabricated elements and digital design techniques · Warsaw University of Technology, CPR-IDUB/238/Z01/2024</p></div>
@@ -1575,7 +1933,7 @@ html[data-view="cv"] .subhead{display:none}
             <div><h3>Rector's team award for organisational achievements (first degree)</h3>
             <p class="org">Warsaw University of Technology, academic year 2022/23</p></div>
           </li>
-          <li data-roles="research computational-designer">
+          <li data-roles="research computational-designer bim-automation">
             <span class="when">2023</span>
             <div><h3>Rector's team award for teaching achievements (third degree)</h3>
             <p class="org">Warsaw University of Technology, academic year 2021/22</p></div>
@@ -1586,12 +1944,12 @@ html[data-view="cv"] .subhead{display:none}
             <p class="org">Winning entry by Studio Widoki, with Bjerg Arkitektur as consultant</p>
             <p class="org" data-for="research cv">Carbon footprint calculations by Bjerg Arkitektur: prefabricated timber, about 6 kg CO₂e/m² per year over 50 years</p></div>
           </li>
-          <li data-roles="general domain-expert research computational-designer">
+          <li data-roles="general domain-expert research computational-designer bim-automation">
             <span class="when">2022</span>
             <div><h3>PLGBC Green Building Awards: best green building without certification</h3>
             <p class="org">Passive House kindergarten in Podkowa Leśna, Bjerg Arkitektur; award received on behalf of the practice. Also a distinction for an educational building.</p></div>
           </li>
-          <li data-roles="general research research-engineer">
+          <li data-roles="general research research-engineer simulation-scientist science-data-expert">
             <span class="when">2022</span>
             <div><h3>Distinction for the doctoral thesis</h3>
             <p class="org">Innowator Mazowsza competition</p></div>
@@ -1605,8 +1963,8 @@ html[data-view="cv"] .subhead{display:none}
       <h2>Service</h2>
       <div class="sec-body">
         <ul class="rows talks">
-          <li data-roles="research general research-engineer"><span class="when">2026–</span><div><h3>Guest co-editor, <i>Buildings</i> (MDPI)</h3><p class="org">Special issue on performance-responsive architecture and urban design</p></div></li>
-          <li data-roles="research domain-expert research-engineer"><span class="when">2025–</span><div><h3>Reviewer</h3><p class="org">Energy and Buildings, Automation in Construction, Buildings, Energies, Architecture, Digital</p></div></li>
+          <li data-roles="research general research-engineer simulation-scientist science-data-expert"><span class="when">2026–</span><div><h3>Guest co-editor, <i>Buildings</i> (MDPI)</h3><p class="org">Special issue on performance-responsive architecture and urban design</p></div></li>
+          <li data-roles="research domain-expert research-engineer simulation-scientist science-data-expert"><span class="when">2025–</span><div><h3>Reviewer, 21 reviews for 9 journals</h3><p class="org">Buildings (10), Energy and Buildings (3), Architecture (2), Automation in Construction, Artificial Intelligence Review, Digital, Discover Artificial Intelligence, Energies, Scientific Reports</p></div></li>
           <li data-roles="research"><span class="when">2024–26</span><div><h3>Jury member</h3><p class="org">National competition for the best pro-environmental diploma project; judge-rapporteur in 2025</p></div></li>
           <li data-roles="research"><span class="when">2023–26</span><div><h3>Conference committees</h3><p class="org">Organising committee, Architecture of Challenges IV (2026); scientific and organising committees, Redefining Cities in View of Climatic Changes (2023)</p></div></li>
           <li data-roles="research"><span class="when">2018–23</span><div><h3>Editor, catalogue of the best diploma projects</h3><p class="org">Faculty of Architecture, Warsaw University of Technology, five volumes, two co-edited with A. Grabowska</p></div></li>
@@ -1702,7 +2060,16 @@ document.querySelectorAll(".lens button").forEach(function (b) {
     }
   });
 });
-$("print-btn").addEventListener("click", function () { window.print(); });
+/* The PDF is set in the self-hosted fonts; make sure they are loaded first. */
+function loadPrintFonts() {
+  if (!document.fonts || !document.fonts.load) return Promise.resolve();
+  return Promise.all([
+    document.fonts.load('400 10pt "Source Serif 4"'), document.fonts.load('600 10pt "Source Serif 4"'),
+    document.fonts.load('600 10pt "Archivo"'), document.fonts.load('800 22pt "Archivo"')
+  ]).catch(function () {});
+}
+$("print-btn").addEventListener("click", function () { loadPrintFonts().then(function () { window.print(); }); });
+if (html.getAttribute("data-view") === "cv") loadPrintFonts();
 document.querySelectorAll("[data-role-link]").forEach(function (a) {
   a.setAttribute("aria-current", String(a.dataset.roleLink === html.getAttribute("data-role")));
 });
@@ -1731,22 +2098,87 @@ var sheet = $("menu-sheet"), menuBtn = $("menu-btn");
 function buildSheetNav(view) {
   $("sheet-nav").innerHTML = NAV[view].map(function (n) { return '<a href="#' + n[0] + '">' + n[1] + "</a>"; }).join("");
 }
+/* Spring sheet. Damping ratio + response (Apple's parameters), integrated
+   per frame from the CURRENT value and velocity, so any gesture can grab
+   it mid-flight and it never jumps. */
+var scrim = $("scrim"), sy = 0, sv = 0, target = 0, raf = 0, sheetH = 0, onRest = null;
+function sheetHeight() { return sheet.getBoundingClientRect().height || window.innerHeight * 0.8; }
+function paint() {
+  sheet.style.transform = "translate3d(0," + sy.toFixed(2) + "px,0)";
+  var p = sheetH ? 1 - Math.min(1, Math.max(0, sy / sheetH)) : 0;
+  scrim.style.opacity = p; scrim.style.pointerEvents = p > 0.05 ? "auto" : "none";
+}
+function springTo(to, opts, done) {
+  opts = opts || {}; target = to; onRest = done || null;
+  if (typeof opts.velocity === "number") sv = opts.velocity;
+  var zeta = opts.damping == null ? 1 : opts.damping, T = opts.response || 0.38;
+  var k = Math.pow(2 * Math.PI / T, 2), c = 4 * Math.PI * zeta / T, last = performance.now();
+  cancelAnimationFrame(raf);
+  if (REDUCE) { sy = to; sv = 0; paint(); if (onRest) onRest(); return; }
+  (function step(now) {
+    var dt = Math.min(0.032, (now - last) / 1000); last = now;
+    var n = 4; for (var i = 0; i < n; i++) { var a = -k * (sy - target) - c * sv; sv += a * dt / n; sy += sv * dt / n; }
+    paint();
+    if (Math.abs(sv) < 2 && Math.abs(sy - target) < 0.5) { sy = target; sv = 0; paint(); if (onRest) onRest(); return; }
+    raf = requestAnimationFrame(step);
+  })(last);
+}
 function openSheet() {
+  var wasHidden = sheet.hidden;
   sheet.hidden = false;
+  sheetH = sheetHeight();
+  if (wasHidden) { sy = sheetH; sv = 0; paint(); }
   menuBtn.setAttribute("aria-expanded", "true");
   menuBtn.querySelector(".menu-ico").nextSibling.textContent = "Close";
   html.classList.add("sheet-open");
+  springTo(0, { damping: 1, response: 0.38 });
   var first = sheet.querySelector("a, button");
-  if (first) first.focus();
+  if (first) first.focus({ preventScroll: true });
 }
-function closeSheet(returnFocus) {
+function closeSheet(returnFocus, velocity) {
   if (sheet.hidden) return;
-  sheet.hidden = true;
   menuBtn.setAttribute("aria-expanded", "false");
   menuBtn.querySelector(".menu-ico").nextSibling.textContent = "Menu";
   html.classList.remove("sheet-open");
+  sheetH = sheetHeight();
+  springTo(sheetH, { damping: 1, response: 0.32, velocity: velocity }, function () { sheet.hidden = true; });
   if (returnFocus) menuBtn.focus();
 }
+scrim.addEventListener("click", function () { closeSheet(true); });
+
+/* drag: 1:1 from the grab point, rubber-band above the top, velocity
+   projection on release (Apple's decay formula) decides close vs stay. */
+(function () {
+  var dragging = false, startY = 0, startSy = 0, hist = [];
+  function rubber(o, d) { return (o * d * 0.55) / (d + 0.55 * Math.abs(o)); }
+  function down(e) {
+    var scroller = $("sheet-scroll");
+    if (e.target.closest("a,button,input") && e.target !== $("grabber")) return;
+    if (scroller.scrollTop > 0 && !e.target.closest("#grabber")) return;
+    dragging = true; cancelAnimationFrame(raf);
+    startY = e.clientY; startSy = sy; hist = [[e.timeStamp, e.clientY]];
+    sheet.setPointerCapture(e.pointerId);
+  }
+  function move(e) {
+    if (!dragging) return;
+    var raw = startSy + (e.clientY - startY);
+    sy = raw < 0 ? -rubber(-raw, sheetH) : raw;
+    hist.push([e.timeStamp, e.clientY]); if (hist.length > 6) hist.shift();
+    paint();
+  }
+  function up() {
+    if (!dragging) return; dragging = false;
+    var a = hist[0], b = hist[hist.length - 1], dt = (b[0] - a[0]) / 1000;
+    var v = dt > 0 ? (b[1] - a[1]) / dt : 0;           /* px/s, positive = down */
+    var projected = sy + (v / 1000) * 0.998 / (1 - 0.998);
+    if (projected > sheetH * 0.5) closeSheet(false, v);
+    else springTo(0, { damping: v < -50 ? 0.8 : 1, response: 0.32, velocity: v });
+  }
+  sheet.addEventListener("pointerdown", down);
+  sheet.addEventListener("pointermove", move);
+  sheet.addEventListener("pointerup", up);
+  sheet.addEventListener("pointercancel", up);
+})();
 menuBtn.addEventListener("click", function () { sheet.hidden ? openSheet() : closeSheet(true); });
 sheet.addEventListener("click", function (e) {
   var a = e.target.closest("a");
@@ -1800,6 +2232,23 @@ function labUse(tool) { if (labSeen[tool]) return; labSeen[tool] = true; track("
   });
   if (!ok) el.classList.add("is-incomplete");
 })();
+
+/* In the CV, hide any group or section that a version has filtered empty. */
+function hideEmpty() {
+  var cv = html.getAttribute("data-view") === "cv";
+  document.querySelectorAll("main .sec, main .subhead").forEach(function (el) { el.classList.remove("is-empty"); });
+  if (!cv) return;
+  function shown(el) { return getComputedStyle(el).display !== "none"; }
+  document.querySelectorAll("main .subhead").forEach(function (h) {
+    var list = h.nextElementSibling;
+    if (list && /UL|OL/.test(list.tagName) && !Array.prototype.some.call(list.children, shown)) h.classList.add("is-empty");
+  });
+  document.querySelectorAll("main .sec").forEach(function (sec) {
+    if (!shown(sec)) return;
+    var items = sec.querySelectorAll(".sec-body li, .sec-body dl > div, .sec-body > p:not(.subhead):not(.links):not(.scholar)");
+    if (!Array.prototype.some.call(items, function (i) { return shown(i) && i.offsetParent !== null; })) sec.classList.add("is-empty");
+  });
+}
 
 /* CV download menus: one template, several buttons; only one open at a time */
 var tpl = $("dl-items").innerHTML;
@@ -1983,7 +2432,7 @@ function drawBackdrop() {
   }
   [["N",0],["E",90],["S",180],["W",270]].forEach(function (c) {
     var a = rad(c[1]), r = R + 36;
-    s += '<text x="' + (Math.sin(a) * r).toFixed(1) + '" y="' + (-Math.cos(a) * r + 6).toFixed(1) + '" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="17" font-weight="600" fill="#5B646E">' + c[0] + "</text>";
+    s += '<text x="' + (Math.sin(a) * r).toFixed(1) + '" y="' + (-Math.cos(a) * r + 6).toFixed(1) + '" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="600" fill="#5B646E">' + c[0] + "</text>";
   });
   [172, 80, 355].forEach(function (doy) {
     s += '<path d="' + arcPath(sampleDay(doy, place, tzFor(place, doy), 6)) + '" fill="none" stroke="#13171C" stroke-opacity=".3" stroke-width="1"/>';
@@ -2012,6 +2461,7 @@ function drawBackdrop() {
 var ticking = false;
 function onScroll() {
   ticking = false;
+  html.classList.toggle("scrolled", window.scrollY > 8);
   var max = document.documentElement.scrollHeight - window.innerHeight;
   var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
   $("tb-fill").style.width = (p * 100) + "%";
@@ -2048,7 +2498,7 @@ function render(doy) {
   st += '<line x1="0" y1="' + horizonY + '" x2="' + W + '" y2="' + horizonY + '" stroke="#13171C" stroke-opacity=".35"/>';
   for (var h = 0; h <= 24; h += 3) {
     st += '<line x1="' + x(h * 60) + '" y1="' + horizonY + '" x2="' + x(h * 60) + '" y2="' + (horizonY + 5) + '" stroke="#13171C" stroke-opacity=".3"/>' +
-          '<text x="' + (h === 24 ? x(h * 60) - 4 : x(h * 60) + 4) + '"' + (h === 24 ? ' text-anchor="end"' : "") + ' y="' + (horizonY + 19) + '" font-family="Archivo, Arial, sans-serif" font-size="12" fill="#5B646E">' + String(h).padStart(2, "0") + ":00</text>";
+          '<text x="' + (h === 24 ? x(h * 60) - 4 : x(h * 60) + 4) + '"' + (h === 24 ? ' text-anchor="end"' : "") + ' y="' + (horizonY + 19) + '" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#5B646E">' + String(h).padStart(2, "0") + ":00</text>";
   }
   $("sb-static").innerHTML = st;
 
@@ -2249,6 +2699,7 @@ render(TODAY);
 drawBackdrop();
 drawFacade();
 applyView(html.getAttribute("data-view"), false);
+hideEmpty();
 setInterval(function () { if (+slider.value === TODAY) render(TODAY); }, 60000);
 })();
 </script>

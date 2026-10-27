@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mateusz Płoszaj-Mazurek — building researcher, daylight and computation</title>
-<meta name="description" content="Building researcher at Warsaw University of Technology. Daylight regulation and performance, fast daylight prediction, carbon footprint methods and computational design. Consulting as AIE.">
+<title>Mateusz Płoszaj-Mazurek — architect, daylight and sunlight research, creator of Solaie</title>
+<meta name="description" content="Building researcher at Warsaw University of Technology and creator of Solaie, a Revit add-in for sunlight-access (nasłonecznienie) checks under § 60 of the Polish technical conditions. Daylight regulation, fast daylight prediction and computational design. Consulting as AIE.">
 <meta property="og:title" content="Mateusz Płoszaj-Mazurek">
 <meta property="og:description" content="Building researcher: daylight, building regulation, computational design.">
 <meta property="og:type" content="profile">
@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://curiosit.github.io/Curiosit/og-research.png">
 <link rel="canonical" href="https://curiosit.github.io/Curiosit/">
+<meta name="author" content="Mateusz Płoszaj-Mazurek">
 <link rel="icon" href="favicon.ico?v=2" sizes="any">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png?v=2" type="image/png" sizes="32x32">
@@ -34,7 +35,7 @@
   var VIEWS = ["research", "aie", "cv"];
   /* public CV versions: general, research, computational-designer
      unlisted versions for applications: product-engineer, research-engineer, domain-expert */
-  var ROLES = ["general", "research", "computational-designer", "product-engineer", "research-engineer", "domain-expert", "bim-automation", "simulation-scientist", "science-data-expert"];
+  var ROLES = ["general", "research", "computational-designer", "product-engineer", "research-engineer", "domain-expert", "bim-automation", "simulation-scientist", "science-data-expert", "software-engineer"];
   var v = q.get("for"), r = q.get("role");
   var h = document.documentElement;
   h.setAttribute("data-view", VIEWS.indexOf(v) > -1 ? v : "research");
@@ -57,29 +58,34 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "#person",
+      "@id": "https://curiosit.github.io/Curiosit/#person",
       "name": "Mateusz Płoszaj-Mazurek",
       "alternateName": ["Mateusz Ploszaj-Mazurek", "Mateusz Płoszaj Mazurek", "M. Płoszaj-Mazurek"],
-      "jobTitle": "Building researcher",
+      "jobTitle": ["Building researcher", "Creator of Solaie"],
+      "owns": { "@id": "https://solaie.pl/#software" },
+      "subjectOf": { "@id": "https://solaie.pl/wiedza/linijka-slonca/#article" },
       "affiliation": { "@type": "CollegeOrUniversity", "name": "Warsaw University of Technology, Faculty of Architecture" },
       "alumniOf": ["Aalborg University", "Warsaw University of Technology"],
-      "knowsAbout": ["daylight simulation", "climate-based daylight modelling", "building regulation", "insolation", "surrogate models", "parametric design", "Grasshopper", "Rhino.Inside.Revit", "BIM", "building carbon footprint", "machine learning"],
+      "knowsAbout": ["nasłonecznienie", "linijka słońca", "§ 60 warunków technicznych", "światło dzienne w budynkach", "sunlight access", "§ 60 Polish technical conditions", "daylight simulation", "climate-based daylight modelling", "building regulation", "insolation", "surrogate models", "parametric design", "Grasshopper", "Rhino.Inside.Revit", "BIM", "building carbon footprint", "machine learning"],
       "knowsLanguage": ["pl", "en", "da", "zh"],
       "url": "https://curiosit.github.io/Curiosit/",
       "sameAs": ["https://github.com/Curiosit", "https://www.linkedin.com/in/mateusz-mazurek/", "https://scholar.google.com/citations?user=yFWVSDIAAAAJ", "https://orcid.org/0000-0002-4618-7849"],
       "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0002-4618-7849" },
-      "award": ["Best Mashup Project, AEC Hackathon Copenhagen 2024", "Rector's team award for teaching achievements, Warsaw University of Technology, 2023", "Distinction for the doctoral thesis, Innowator Mazowsza, 2022", "PLGBC Green Building Awards 2022"]
+      "award": ["Best Mashup Project, AEC Hackathon Copenhagen 2024", "Distinction for the doctoral thesis, Innowator Mazowsza, 2022", "PLGBC Green Building Awards 2022"]
     },
     {
       "@type": "ProfessionalService",
       "name": "AIE Mateusz Płoszaj-Mazurek",
       "taxID": "5253011605",
       "alternateName": "Architecture · Intelligence · Environment",
-      "founder": { "@id": "#person" },
+      "founder": { "@id": "https://curiosit.github.io/Curiosit/#person" },
       "areaServed": "Worldwide",
       "address": { "@type": "PostalAddress", "addressLocality": "Warsaw", "addressCountry": "PL" },
+      "@id": "https://curiosit.github.io/Curiosit/#aie",
+      "url": "https://curiosit.github.io/Curiosit/?for=aie",
       "knowsAbout": ["computational design automation", "Grasshopper development", "design optimization", "simulation surrogate models", "daylight and insolation analysis", "workshops for architects", "domain expertise for AEC AI"]
-    }
+    },
+    { "@type": "SoftwareApplication", "@id": "https://solaie.pl/#software", "name": "Solaie", "url": "https://solaie.pl/" }
   ]
 }
 </script>
@@ -139,7 +145,8 @@ html[data-view="cv"][data-role="research-engineer"]      [data-roles]:not([data-
 html[data-view="cv"][data-role="domain-expert"]          [data-roles]:not([data-roles~="domain-expert"]),
 html[data-view="cv"][data-role="bim-automation"] [data-roles]:not([data-roles~="bim-automation"]),
 html[data-view="cv"][data-role="simulation-scientist"] [data-roles]:not([data-roles~="simulation-scientist"]),
-html[data-view="cv"][data-role="science-data-expert"] [data-roles]:not([data-roles~="science-data-expert"]){display:none !important}
+html[data-view="cv"][data-role="science-data-expert"] [data-roles]:not([data-roles~="science-data-expert"]),
+html[data-view="cv"][data-role="software-engineer"] [data-roles]:not([data-roles~="software-engineer"]){display:none !important}
 
 /* ================================================================
    BACKDROP: sun-path diagram (research view only)
@@ -454,7 +461,8 @@ html[data-view="research"] #awards{order:6}
 html[data-view="research"] #experience{order:7}
 html[data-view="research"] #teaching{order:8}
 html[data-view="research"] #service{order:9}
-html[data-view="research"] #contact{order:10}
+html[data-view="research"] #solaie{order:10}
+html[data-view="research"] #contact{order:11}
 
 html[data-view="aie"] #services{order:1}
 html[data-view="aie"] #teaching{order:2}
@@ -546,6 +554,28 @@ html[data-view="cv"][data-role="science-data-expert"] #pub-llm{order:-3}
 html[data-view="cv"][data-role="science-data-expert"] #sk-methods{order:-3}
 html[data-view="cv"][data-role="science-data-expert"] #sk-domain{order:-2}
 
+/* software-engineer (Upwork) */
+html[data-view="cv"][data-role="software-engineer"] #experience{order:1}
+html[data-view="cv"][data-role="software-engineer"] #projects{order:2}
+html[data-view="cv"][data-role="software-engineer"] #skills{order:3}
+html[data-view="cv"][data-role="software-engineer"] #education{order:4}
+html[data-view="cv"][data-role="software-engineer"] #teaching{order:5}
+html[data-view="cv"][data-role="software-engineer"] #awards{order:6}
+html[data-view="cv"][data-role="software-engineer"] #publications{order:7}
+html[data-view="cv"][data-role="software-engineer"] #talks{order:8}
+html[data-view="cv"][data-role="software-engineer"] #service{order:9}
+html[data-view="cv"][data-role="software-engineer"] #x-ocl{order:-3}
+html[data-view="cv"][data-role="software-engineer"] #x-enxess{order:-2}
+html[data-view="cv"][data-role="software-engineer"] #x-slad{order:-1}
+html[data-view="cv"][data-role="software-engineer"] #p-solaie{order:-5}
+html[data-view="cv"][data-role="software-engineer"] #p-freedraw{order:-4}
+html[data-view="cv"][data-role="software-engineer"] #p-enxess{order:-3}
+html[data-view="cv"][data-role="software-engineer"] #p-goeko{order:-2}
+html[data-view="cv"][data-role="software-engineer"] #p-shapediver{order:-1}
+html[data-view="cv"][data-role="software-engineer"] #sk-code{order:-4}
+html[data-view="cv"][data-role="software-engineer"] #sk-platform{order:-3}
+html[data-view="cv"][data-role="software-engineer"] #sk-cd{order:-2}
+html[data-view="cv"][data-role="software-engineer"] #sk-lang{order:-1}
 /* order inside lists */
 html[data-view="cv"][data-role="domain-expert"] #x-bjerg{order:-2}
 html[data-view="cv"][data-role="research-engineer"] #p-omegaflux{order:-2}
@@ -689,7 +719,9 @@ html.scrolled .topbar{box-shadow:0 1px 0 rgba(0,0,0,.06),0 8px 24px -16px rgba(0
 .tb-dot{box-shadow:0 0 0 3px rgba(245,245,247,.9)}
 
 /* ---------- segmented control with a sliding thumb ---------- */
-.lens{position:relative;border:0;background:rgba(118,118,128,.12);padding:2px;border-radius:9px;isolation:isolate}
+.lens{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;border:0;background:rgba(118,118,128,.12);padding:2px;border-radius:9px;isolation:isolate}
+.lens-wide{display:grid;width:100%}
+.lens button{white-space:nowrap;text-align:center}
 .lens::before{content:"";position:absolute;z-index:-1;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);border-radius:7px;background:#fff;
   box-shadow:0 3px 8px rgba(0,0,0,.12),0 3px 1px rgba(0,0,0,.04);transition:transform .45s var(--spring)}
 html[data-view="aie"] .lens::before{transform:translateX(100%)}
@@ -858,6 +890,7 @@ footer{border-top:0;font-size:12px}
   html[data-view="cv"][data-role="research"] #sk-methods,
   .scrim,.sheet,#menu-sheet,
   html[data-view="cv"][data-role="product-engineer"] #service{display:none !important}
+  html[data-view="cv"][data-role="software-engineer"] #service,html[data-view="cv"][data-role="software-engineer"] #sk-methods,html[data-view="cv"][data-role="software-engineer"] #sk-domain,html[data-view="cv"][data-role="software-engineer"] #publications,html[data-view="cv"][data-role="software-engineer"] #awards,html[data-view="cv"][data-role="software-engineer"] #talks{display:none !important}
 }
 @media print{html,body{height:auto !important;min-height:0 !important}.wrap,main.flow{padding-bottom:0 !important;margin-bottom:0 !important}}
 /* Print, restated after the design-variant and dark rules so the CV PDF
@@ -1069,6 +1102,7 @@ footer{border-top:0;font-size:12px}
       <p class="headline" data-roles="bim-automation">BIM and design automation · Revit, Rhino.Inside.Revit, Grasshopper, Python and C# · Architect, PhD</p>
       <p class="headline" data-roles="simulation-scientist">Simulation and machine learning for the built environment · Daylight surrogates, Radiance, gradient boosting · Architect, PhD</p>
       <p class="headline" data-roles="science-data-expert">Domain expert for AI evaluation · Building science, simulation and design workflows · Architect, PhD</p>
+      <p class="headline" data-roles="software-engineer">Software engineer for AEC tools · TypeScript, Three.js, C#/.NET, Python · Architect, PhD</p>
       <p class="headline" data-roles="domain-expert">Architect, PhD · Building regulation and performance · Evaluation for AEC AI</p>
 
       <p class="cv-contact">
@@ -1125,6 +1159,14 @@ footer{border-top:0;font-size:12px}
         Engineering 2026; Energies 2024), and 21 peer reviews for 9 journals, including Artificial Intelligence Review and
         Scientific Reports. Ten years of architectural practice, a PhD in digital design methods, two years in an AEC software
         product team, and 400+ students taught.
+      </p>
+      <p class="lede-sub" data-roles="software-engineer">
+        I build software for architects and engineers end to end: 3D web viewers and configurators, Revit add-ins,
+        Grasshopper plugins, and IFC and BIM data pipelines. Two years at One Click LCA on Carbon Designer 3D
+        (TypeScript, React, Three.js, AG Grid, CI/CD), including six months as interim product owner; before that,
+        contract work for a client in Liechtenstein and freelance jobs on Upwork. Ten years of architectural practice and a PhD in digital design methods
+        mean I understand the model, the regulation and the user behind a feature. I invoice through my company, AIE,
+        and work remotely across time zones.
       </p>
       <p class="lede-sub" data-roles="domain-expert">
         Ten years of architectural practice in Denmark and Poland, from 100 m² houses to 15,000 m² schools and offices,
@@ -1320,6 +1362,15 @@ footer{border-top:0;font-size:12px}
       </div>
     </section>
 
+    <!-- ============ SOLAIE (default view, for search) ============ -->
+    <section class="sec" id="solaie" data-for="research">
+      <h2>Solaie</h2>
+      <div class="sec-body">
+        <p><a href="https://solaie.pl/">Solaie</a> is my Revit add-in for sunlight access (<span lang="pl">nasłonecznienie</span>): it computes how long each room receives sun under § 60 of the Polish technical conditions, on both equinoxes, and shows when the verdict depends on how the rule is read. It is a separate product of my company, AIE, and is now in testing with architecture offices.</p>
+        <p lang="pl"><a href="https://solaie.pl/">solaie.pl</a> · <a href="https://solaie.pl/wiedza/linijka-slonca/">Jak sprawdzić nasłonecznienie: linijka słońca krok po kroku</a></p>
+      </div>
+    </section>
+
     <!-- ============ AIE: services ============ -->
     <section class="sec" id="services" data-for="aie">
       <h2>What I do</h2>
@@ -1359,6 +1410,7 @@ footer{border-top:0;font-size:12px}
               <figcaption>The same 5 × 6 m room in Warsaw, four ways: orientation and an opposite building decide most of the daylight. Climate-based simulation, daylight autonomy at 300 lx.</figcaption>
             </figure>
             <p class="proof">Ten years of compliance work in practice, including daylight simulation studies with VELUX; OmegaFlux for fast early-stage checks.</p>
+            <p class="proof">I am the creator of <a href="https://solaie.pl">Solaie</a>, a Revit add-in that checks sunlight access (<span lang="pl">nasłonecznienie</span>) room by room under § 60 of the Polish technical conditions, on both equinoxes, and shows when the result depends on how the rule is read. Now in testing with architecture offices.</p>
             <a class="ask" href="mailto:mateuszploszajmazurek@gmail.com?subject=AIE%20%E2%80%93%20daylight%20analysis">Ask about a daylight study</a>
           </div>
         </div>
@@ -1409,8 +1461,9 @@ footer{border-top:0;font-size:12px}
               <h3>Researcher and lecturer</h3>
               <p class="org">Faculty of Architecture, Warsaw University of Technology · doctoral candidate from 2017, academic staff since 2021</p>
               <ul>
-                <li>Daylight regulation, simulation and surrogate-model research; see publications.</li>
-                <li data-roles="general computational-designer product-engineer research bim-automation science-data-expert">Teaches Grasshopper and multi-criteria building optimization (400+ students so far); coordinates a lecture cycle on public buildings; runs a second-year design studio.</li>
+                <li data-roles="general research computational-designer product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert">Daylight regulation, simulation and surrogate-model research; see publications.</li>
+                <li data-roles="software-engineer">Daylight simulation and surrogate-model research, with tools published as code (OmegaFlux, below).</li>
+                <li data-roles="general computational-designer product-engineer research bim-automation science-data-expert software-engineer">Teaches Grasshopper and multi-criteria building optimization (400+ students so far); runs a second-year design studio.</li>
                 <li data-roles="research-engineer domain-expert research simulation-scientist science-data-expert">Designs parametric experiments and evaluation frameworks: thousands of simulated room variants, held-out test splits, convergence checks.</li>
               </ul>
             </div>
@@ -1422,12 +1475,12 @@ footer{border-top:0;font-size:12px}
               <p class="org">One Click LCA, Helsinki · remote</p>
               <ul>
                 <li>Built features for Carbon Designer 3D, an early-design tool for architects (TypeScript, React, Three.js, AG Grid).</li>
-                <li data-roles="general computational-designer product-engineer domain-expert research-engineer bim-automation simulation-scientist science-data-expert">Interim product owner in the second half of 2025; took the Free Drawing feature from specification to release.</li>
-                <li data-roles="general product-engineer domain-expert computational-designer bim-automation science-data-expert">Wrote methodology specifications and brought in a paying customer.</li>
+                <li data-roles="general computational-designer product-engineer domain-expert research-engineer bim-automation simulation-scientist science-data-expert software-engineer">Interim product owner in the second half of 2025; took the Free Drawing feature from specification to release.</li>
+                <li data-roles="general product-engineer domain-expert computational-designer bim-automation science-data-expert software-engineer">Wrote methodology specifications.</li>
               </ul>
             </div>
           </li>
-          <li id="x-enxess" data-roles="general product-engineer computational-designer bim-automation">
+          <li id="x-enxess" data-roles="general product-engineer computational-designer bim-automation software-engineer">
             <span class="when">2024</span>
             <div>
               <h3>Contract developer</h3>
@@ -1435,7 +1488,7 @@ footer{border-top:0;font-size:12px}
               <p>Web viewer for IFC models of historical building objects (Three.js, React, TypeScript).</p>
             </div>
           </li>
-          <li id="x-slad" data-roles="general product-engineer computational-designer research-engineer bim-automation simulation-scientist">
+          <li id="x-slad" data-roles="general product-engineer computational-designer research-engineer bim-automation simulation-scientist software-engineer">
             <span class="when">2023–2024</span>
             <div>
               <h3>Founder</h3>
@@ -1452,7 +1505,7 @@ footer{border-top:0;font-size:12px}
                 <li>Single- and multi-family housing, schools, kindergartens and offices, from 100 m² to 15,000 m².</li>
                 <li>All design phases: concept, permit and construction documentation, and architectural supervision on site.</li>
                 <li data-roles="general domain-expert product-engineer computational-designer bim-automation science-data-expert">Code compliance in practice under Danish and Polish regulations and Passive House certification; daylight simulation studies with VELUX.</li>
-                <li data-roles="general computational-designer product-engineer research bim-automation">2022–2024: architecture, sustainability and software consultant, building in-house design tools; co-author of the Polish whole-life carbon roadmap.</li>
+                <li data-roles="general computational-designer product-engineer research bim-automation software-engineer">2022–2024: architecture, sustainability and software consultant, building in-house design tools; co-author of the Polish whole-life carbon roadmap.</li>
               </ul>
             </div>
           </li>
@@ -1462,7 +1515,7 @@ footer{border-top:0;font-size:12px}
 
     <!-- ============ CV: projects ============ -->
     <section class="sec" id="projects" data-for="cv">
-      <h2 data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert">Selected projects</h2>
+      <h2 data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert software-engineer">Selected projects</h2>
       <h2 data-roles="computational-designer">Commercial and tool work</h2>
       <div class="sec-body">
         <ol class="rows">
@@ -1473,21 +1526,28 @@ footer{border-top:0;font-size:12px}
               <p>Per-point daylight prediction from geometric view descriptors with gradient-boosted trees, exported to ONNX and run in the browser. Dataset generation, held-out validation against Radiance, transfer to unseen room shapes. <a href="https://curiosit.github.io/OmegaFlux/">curiosit.github.io/OmegaFlux</a></p>
             </div>
           </li>
-          <li id="p-freedraw" data-roles="general computational-designer product-engineer bim-automation">
+          <li id="p-solaie" data-roles="software-engineer general computational-designer bim-automation">
+            <span class="when">2026</span>
+            <div>
+              <h3>Solaie: sunlight-access checker for Revit <span class="tag">own product, in testing</span></h3>
+              <p>Revit 2027 add-in (C#, .NET, WPF) with a compiled Python analysis engine: model scanning, geometry export, vectorised ray tracing against context meshes, signed time-limited licences and an HTML report for building authorities. <a href="https://solaie.pl">solaie.pl</a></p>
+            </div>
+          </li>
+          <li id="p-freedraw" data-roles="general computational-designer product-engineer bim-automation software-engineer">
             <span class="when">2025</span>
             <div>
               <h3>Free Drawing, Carbon Designer 3D <span class="tag">One Click LCA</span></h3>
               <p>Led a feature letting architects sketch building massing directly in the browser, from user problem through specification to release.</p>
             </div>
           </li>
-          <li id="p-enxess" data-roles="computational-designer bim-automation">
+          <li id="p-enxess" data-roles="computational-designer bim-automation software-engineer">
             <span class="when">2024</span>
             <div>
               <h3>IFC viewer for historical building objects <span class="tag">client, Liechtenstein</span></h3>
               <p>Browser viewer built with Three.js, React and TypeScript for exploring IFC models of historical building elements.</p>
             </div>
           </li>
-          <li id="p-upwork" data-roles="computational-designer product-engineer">
+          <li id="p-upwork" data-roles="computational-designer product-engineer software-engineer">
             <span class="when">before 2024</span>
             <div>
               <h3>Freelance AEC development <span class="tag">clients via Upwork</span></h3>
@@ -1508,28 +1568,28 @@ footer{border-top:0;font-size:12px}
               <p>Co-author, with Alicja Kuczera, of the national roadmap for decarbonising the built environment by 2050.</p>
             </div>
           </li>
-          <li id="p-goeko" data-roles="computational-designer product-engineer bim-automation">
+          <li id="p-goeko" data-roles="computational-designer product-engineer bim-automation software-engineer">
             <span class="when">2023–24</span>
             <div>
               <h3>goeko.gha: Ökobaudat in Grasshopper <span class="tag">open source</span></h3>
               <p>Grasshopper plugin that reads environmental product declarations from the German Ökobaudat database through its API. MIT licence, published on Food4Rhino. <a href="https://github.com/Curiosit/goeko.gha">github.com/Curiosit/goeko.gha</a></p>
             </div>
           </li>
-          <li id="p-shapediver" data-roles="computational-designer">
+          <li id="p-shapediver" data-roles="computational-designer software-engineer">
             <span class="when">2024</span>
             <div>
               <h3>Wall carbon footprint configurator <span class="tag">ShapeDiver</span></h3>
               <p>No-code web app built from a Grasshopper definition, loading material data from Ökobaudat through an API.</p>
             </div>
           </li>
-          <li id="p-hack" data-roles="general computational-designer product-engineer bim-automation simulation-scientist">
+          <li id="p-hack" data-roles="computational-designer product-engineer bim-automation simulation-scientist software-engineer">
             <span class="when">2023–24</span>
             <div>
               <h3>AEC Hackathons</h3>
               <p>Copenhagen 2023 (SpeckleLCA), Zurich 2024 (InfraWeb), Copenhagen 2024 (OpenDetail, Best Mashup Project).</p>
             </div>
           </li>
-          <li id="p-llm" data-roles="domain-expert research-engineer bim-automation simulation-scientist science-data-expert">
+          <li id="p-llm" data-roles="domain-expert research-engineer bim-automation simulation-scientist science-data-expert software-engineer">
             <span class="when">2026</span>
             <div>
               <h3>Language models for IFC enrichment</h3>
@@ -1568,11 +1628,11 @@ footer{border-top:0;font-size:12px}
             <span class="t">Green Data Centres: Sustainable Solutions with Green Energy and Green–Blue Infrastructure</span>
             <span class="v">M. Grochulska-Salak, E. Maciejewska, P. A. Bujak et al. · Energies 18(24), 6592 (2025) · <a href="https://doi.org/10.3390/en18246592">doi</a><span class="cites" data-cite="energies2025"></span></span>
           </li>
-          <li id="pub-energies2024" data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert">
+          <li id="pub-energies2024" data-roles="general research product-engineer research-engineer domain-expert bim-automation simulation-scientist science-data-expert software-engineer">
             <span class="t">Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development</span>
             <span class="v">with E. Ryńska · Energies 17(12), 2997 (2024) · <a href="https://doi.org/10.3390/en17122997">doi</a><span class="cites" data-cite="energies2024"></span></span>
           </li>
-          <li id="pub-energies2020" data-roles="general research product-engineer research-engineer domain-expert simulation-scientist science-data-expert">
+          <li id="pub-energies2020" data-roles="general research product-engineer research-engineer domain-expert simulation-scientist science-data-expert software-engineer">
             <span class="t">Methods to Optimize Carbon Footprint of Buildings in Regenerative Architectural Design with the Use of Machine Learning, Convolutional Neural Network, and Parametric Design</span>
             <span class="v">with E. Ryńska and M. Grochulska-Salak · Energies 13(20), 5289 (2020) · <a href="https://doi.org/10.3390/en13205289">doi</a><span class="cites" data-cite="energies2020"></span></span>
           </li>
@@ -1705,6 +1765,7 @@ footer{border-top:0;font-size:12px}
           <div id="sk-domain"><dt>Building domain</dt><dd>Climate-based daylight (sDA, ASE, UDI, EN 17037), insolation, Polish and Danish building regulations, Passive House, building carbon footprint</dd></div>
           <div id="sk-cd"><dt>Design tools</dt><dd>Rhino and Grasshopper, Rhino.Inside.Revit, Revit, ArchiCAD, Ladybug and Honeybee, Radiance, THERM, IFC, That Open Company tools</dd></div>
           <div id="sk-code"><dt>Code</dt><dd>Python (NumPy, pandas, scikit-learn, XGBoost, ONNX), C#, TypeScript, React, Three.js, Git, CI/CD; daily AI-assisted development with Claude Code, including six months on a production codebase</dd></div>
+          <div id="sk-platform" data-roles="software-engineer"><dt>Platforms</dt><dd>Revit API (C#, .NET, WPF), Grasshopper and RhinoCommon, IFC and That Open Company tools, Three.js, ONNX Runtime in the browser, Playwright for automated visual checks</dd></div>
           <div id="sk-lang"><dt>Languages</dt><dd>Polish (native), English (fluent), Danish (communicative), Chinese (basic)</dd></div>
         </dl>
       </div>
@@ -1735,12 +1796,12 @@ footer{border-top:0;font-size:12px}
         <p class="teach-intro" data-for="aie">The workshops I offer are built on the courses I teach at the university and, since 2020, on the iBIM postgraduate programme for practising architects and engineers: from a first contact with Grasshopper to Rhino.Inside.Revit, scripting and multi-criteria optimization of energy, daylight and carbon.</p>
         <ul class="rows">
           <li><span class="when">7 years</span><div><h3>Introduction to Grasshopper</h3><p>"Cyfrowe techniki geometryczne": parametric modelling and multi-criteria optimization of energy, daylight and carbon.</p><p class="org" data-for="aie">Warsaw University of Technology · about 40 students a year</p></div></li>
-          <li id="t-ibim" data-roles="general computational-designer product-engineer research domain-expert bim-automation science-data-expert"><span class="when">2020–</span><div><h3>iBIM postgraduate programme (Interdisciplinary BIM Studies)</h3><p>Introductory and advanced Grasshopper, environmental and daylight analysis with Rhino.Inside.Revit and Grasshopper, Python and C# scripting, for practising architects and engineers. Hybrid.</p></div></li>
+          <li id="t-ibim" data-roles="general computational-designer product-engineer research domain-expert bim-automation science-data-expert software-engineer"><span class="when">2020–</span><div><h3>iBIM postgraduate programme (Interdisciplinary BIM Studies)</h3><p>Introductory and advanced Grasshopper, environmental and daylight analysis with Rhino.Inside.Revit and Grasshopper, Python and C# scripting, for practising architects and engineers. Hybrid.</p></div></li>
           <li id="t-sun" data-roles="research"><span class="when">2026–</span><div><h3>Sun, Daylight, and Architecture</h3><p>English-language course on the role of the sun and daylight in architectural and urban design, co-taught with Krystian Kwieciński.</p></div></li>
           <li id="t-elective" data-roles="research"><span class="when">2026–</span><div><h3>Digital design in sustainable practice and research</h3><p>Elective seminar "Zastosowanie projektowania cyfrowego w zrównoważonej praktyce projektowej i badaniach naukowych".</p></div></li>
-          <li data-roles="research domain-expert research-engineer science-data-expert"><span class="when">ongoing</span><div><h3>Computing Architecture for Sustainable Environment</h3><p>Seminar for fourth- and fifth-year students, including daylight simulation.</p></div></li>
-          <li data-roles="research product-engineer"><span class="when">ongoing</span><div><h3>Design studio and lecture cycle</h3><p>Second-year studio on small public architecture; coordinator of the semester-seven lectures on public buildings; English-language Solar Seminar.</p></div></li>
-          <li data-for="research aie"><span class="when">2023</span><div><h3>Rector's team award for teaching</h3><p>Warsaw University of Technology, for teaching achievements in 2021/22.</p></div></li>
+          <li data-roles="research domain-expert research-engineer science-data-expert"><span class="when">2024–</span><div><h3>CASE specialisation: Człowiek, Architektura, Środowisko, Energia</h3><p>Seminar, lectures and design studio in the specialisation, taught with a team of colleagues.</p></div></li>
+          <li data-roles="research domain-expert research-engineer science-data-expert"><span class="when">2024–</span><div><h3>CASES: Computing Architecture for Sustainable Environment Seminar</h3><p>Seminar for fourth- and fifth-year students within the CASE specialisation, including daylight simulation.</p></div></li>
+          <li data-roles="research product-engineer"><span class="when">2021–</span><div><h3>PAwK: Projekt Architektoniczny w Krajobrazie</h3><p>Second-year design studio on small public architecture in the landscape.</p></div></li>
           <li data-for="aie"><span class="when">ongoing</span><div><h3>Teaching online</h3><p>Faculty classes run remotely, so workshops can be taught online as well as on site.</p></div></li>
           <li data-roles="research"><span class="when">2021–</span><div><h3>Techniques Integration, ASK</h3><p>Co-taught course integrating technical and environmental design.</p></div></li>
         </ul>
@@ -1761,20 +1822,30 @@ footer{border-top:0;font-size:12px}
 
         <p class="subhead" data-for="research aie cv">Training for industry and professionals</p>
         <ul class="rows talks">
-          <li data-for="research aie cv" data-roles="general computational-designer product-engineer research">
+          <li data-for="research cv" data-roles="research product-engineer software-engineer">
+            <span class="when">2023–24</span>
+            <div><h3>ESG Digital Leader Academy <span class="tag">mentor</span></h3>
+            <p class="org">Proptech Foundation · development programme for managers implementing ESG strategy with digital tools, two editions (2023, 2024)</p></div>
+          </li>
+          <li data-for="research aie cv" data-roles="general computational-designer product-engineer research software-engineer">
             <span class="when">2023</span>
             <div><h3>Pro-environmental design: training sessions for architects <span class="tag">guest lecturer</span></h3>
             <p class="org">Saint-Gobain · two sessions, Jura Krakowsko-Częstochowska and Żnin, October 2023</p></div>
-          </li>
-          <li data-for="research cv" data-roles="research product-engineer">
-            <span class="when">2023</span>
-            <div><h3>ESG Digital Leader Academy <span class="tag">mentor</span></h3>
-            <p class="org">Proptech Foundation · development programme for managers implementing ESG strategy with digital tools</p></div>
           </li>
           <li data-for="research aie cv" data-roles="research">
             <span class="when">2023</span>
             <div><h3>Lublin on its way to Twin Transition: Danish–Polish workshop <span class="tag">introductory talk</span></h3>
             <p class="org">Lublin, 13 April 2023</p></div>
+          </li>
+          <li data-for="research cv" data-roles="research product-engineer domain-expert software-engineer">
+            <span class="when">2023</span>
+            <div><h3>How to choose software for managing a building's carbon footprint <span class="tag">expert</span></h3>
+            <p class="org">Webinar, Proptech Foundation, 13 December 2023</p></div>
+          </li>
+          <li data-for="research cv" data-roles="research">
+            <span class="when">2021</span>
+            <div><h3>Launch of the Whole Life Carbon Roadmap for Poland <span class="tag">speaker</span></h3>
+            <p class="org">Webinar with PLGBC, EBRD and WorldGBC, 9 June 2021</p></div>
           </li>
         </ul>
 
@@ -1790,7 +1861,7 @@ footer{border-top:0;font-size:12px}
             <div><h3>Session "Architecture of Community" and discussion panels <span class="tag">chair, moderator</span></h3>
             <p class="org">III International Conference Architecture of Challenges: New European Bauhaus – Building Community, Warsaw, 30 June – 1 July 2025</p></div>
           </li>
-          <li data-for="research cv" data-roles="research product-engineer">
+          <li data-for="research cv" data-roles="research product-engineer software-engineer">
             <span class="when">2025</span>
             <div><h3>Decarbonising buildings in the climate crisis: policy, practice and the investor's view <span class="tag">panellist</span></h3>
             <p class="org">PLGBC Green Building Summit</p></div>
@@ -1799,11 +1870,6 @@ footer{border-top:0;font-size:12px}
             <span class="when">2024</span>
             <div><h3>Digital and business challenges for developers in 2024: non-financial reporting and carbon footprint <span class="tag">panellist</span></h3>
             <p class="org">Building &amp; Human Summit, Łódź, March 2024</p></div>
-          </li>
-          <li data-for="research cv" data-roles="research product-engineer domain-expert">
-            <span class="when">2023</span>
-            <div><h3>How to choose software for managing a building's carbon footprint <span class="tag">expert</span></h3>
-            <p class="org">Webinar, Proptech Foundation, 13 December 2023</p></div>
           </li>
           <li data-for="research aie cv" data-roles="research domain-expert">
             <span class="when">2023</span>
@@ -1821,11 +1887,6 @@ footer{border-top:0;font-size:12px}
             <p class="org">Miasta Przyszłości, 4th edition, online</p></div>
           </li>
           <li data-for="research cv" data-roles="research">
-            <span class="when">2021</span>
-            <div><h3>Launch of the Whole Life Carbon Roadmap for Poland <span class="tag">speaker</span></h3>
-            <p class="org">Webinar with PLGBC, EBRD and WorldGBC, 9 June 2021</p></div>
-          </li>
-          <li data-for="research cv" data-roles="research">
             <span class="when">2018</span>
             <div><h3>"Zero Carbon. Road to sustainable home" <span class="tag">moderator</span></h3>
             <p class="org">8th Green Building Symposium, PLGBC</p></div>
@@ -1839,7 +1900,7 @@ footer{border-top:0;font-size:12px}
             <div><h3>Sztuka vs. Sztuczna Inteligencja. Algorytm z duszą i emocjami – to tylko kwestia czasu? <span class="tag">speaker</span></h3>
             <p class="org">22nd Warsaw Art Fair (Warszawskie Targi Sztuki)</p></div>
           </li>
-          <li data-for="research cv" data-roles="product-engineer research">
+          <li data-for="research cv" data-roles="product-engineer research software-engineer">
             <span class="when">2025–26</span>
             <div><h3>Early-phase building carbon footprint optimization with Carbon Designer 3D <span class="tag">speaker</span></h3>
             <p class="org">Carbon Experts Summit, 2025 and 2026</p></div>
@@ -1928,16 +1989,6 @@ footer{border-top:0;font-size:12px}
             <div><h3>First prize, Best Mashup Project</h3>
             <p class="org">AEC Hackathon, Copenhagen</p></div>
           </li>
-          <li data-for="research cv" data-roles="research">
-            <span class="when">2024</span>
-            <div><h3>Rector's team award for organisational achievements (first degree)</h3>
-            <p class="org">Warsaw University of Technology, academic year 2022/23</p></div>
-          </li>
-          <li data-roles="research computational-designer bim-automation">
-            <span class="when">2023</span>
-            <div><h3>Rector's team award for teaching achievements (third degree)</h3>
-            <p class="org">Warsaw University of Technology, academic year 2021/22</p></div>
-          </li>
           <li data-roles="general domain-expert research">
             <span class="when">2023</span>
             <div><h3>Competition win: energy-efficient multi-storey housing in Poland</h3>
@@ -1965,10 +2016,11 @@ footer{border-top:0;font-size:12px}
         <ul class="rows talks">
           <li data-roles="research general research-engineer simulation-scientist science-data-expert"><span class="when">2026–</span><div><h3>Guest co-editor, <i>Buildings</i> (MDPI)</h3><p class="org">Special issue on performance-responsive architecture and urban design</p></div></li>
           <li data-roles="research domain-expert research-engineer simulation-scientist science-data-expert"><span class="when">2025–</span><div><h3>Reviewer, 21 reviews for 9 journals</h3><p class="org">Buildings (10), Energy and Buildings (3), Architecture (2), Automation in Construction, Artificial Intelligence Review, Digital, Discover Artificial Intelligence, Energies, Scientific Reports</p></div></li>
-          <li data-roles="research"><span class="when">2024–26</span><div><h3>Jury member</h3><p class="org">National competition for the best pro-environmental diploma project; judge-rapporteur in 2025</p></div></li>
-          <li data-roles="research"><span class="when">2023–26</span><div><h3>Conference committees</h3><p class="org">Organising committee, Architecture of Challenges IV (2026); scientific and organising committees, Redefining Cities in View of Climatic Changes (2023)</p></div></li>
+          <li data-roles="research"><span class="when">2024–</span><div><h3>Jury member</h3><p class="org">National competition for the best pro-environmental diploma project</p></div></li>
+          <li data-roles="research"><span class="when">2019–26</span><div><h3>Conference committees</h3><p class="org">Organising committee, Architecture of Challenges IV (2026); scientific and organising committees, Redefining Cities in View of Climatic Changes (2019, 2023)</p></div></li>
           <li data-roles="research"><span class="when">2018–23</span><div><h3>Editor, catalogue of the best diploma projects</h3><p class="org">Faculty of Architecture, Warsaw University of Technology, five volumes, two co-edited with A. Grabowska</p></div></li>
-          <li data-roles="research"><span class="when">current</span><div><h3>Auxiliary supervisor</h3><p class="org">Doctoral candidate at Warsaw University of Technology</p></div></li>
+          <li data-roles="research"><span class="when">current</span><div><h3>Auxiliary supervisor</h3><p class="org">A doctoral candidate and a master's student at Warsaw University of Technology</p></div></li>
+          <li data-roles="research"><span class="when">ongoing</span><div><h3>Technical consultant for diploma projects</h3><p class="org">More than ten diploma projects at the Faculty of Architecture, Warsaw University of Technology</p></div></li>
           <li data-roles="research"><span class="when">current</span><div><h3>Member, Sustainable Architecture Circle, SARP</h3></div></li>
         </ul>
       </div>
@@ -1984,6 +2036,7 @@ footer{border-top:0;font-size:12px}
           <a href="https://www.linkedin.com/in/mateusz-mazurek/">LinkedIn</a>
           <a href="https://scholar.google.com/citations?user=yFWVSDIAAAAJ">Google Scholar</a>
           <a href="https://orcid.org/0000-0002-4618-7849">ORCID</a>
+          <a href="https://solaie.pl">Solaie</a>
         </p>
         <div class="dl-row" data-for="research aie">
           <details class="dl">
@@ -2003,7 +2056,7 @@ footer{border-top:0;font-size:12px}
 <footer>
   <span>© <span id="year">2026</span> Mateusz Płoszaj-Mazurek</span>
   <span class="imprint" data-for="aie">AIE Mateusz Płoszaj-Mazurek, registered in CEIDG · NIP 5253011605 · REGON 529229799</span>
-  <span data-for="research"><a href="?for=aie">Consulting as AIE</a></span>
+  <span data-for="research"><a href="?for=aie">Consulting as AIE</a> · Creator of <a href="https://solaie.pl">Solaie</a></span>
 </footer>
 
 <script>
@@ -2022,7 +2075,7 @@ var NAV = {
   cv:       []
 };
 var TITLES = {
-  research: "Mateusz Płoszaj-Mazurek — building researcher, daylight and computation",
+  research: "Mateusz Płoszaj-Mazurek — architect, daylight and sunlight research, creator of Solaie",
   aie: "AIE — Architecture · Intelligence · Environment",
   cv: "Mateusz Płoszaj-Mazurek — CV"
 };

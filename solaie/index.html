@@ -114,6 +114,62 @@ input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px color-
 .status.ok{color:var(--pass)}.status.err{color:var(--fail)}
 .hp{position:absolute;left:-9999px}
 
+
+/* sample model */
+.demo .ctl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:22px 0 14px}
+.segc{display:inline-flex;background:rgba(118,118,128,.14);border-radius:10px;padding:2px}
+.segc button,.playb{border:0;background:transparent;color:var(--ink);font:600 13.5px var(--font);padding:7px 12px;border-radius:8px;cursor:pointer}
+.segc button[aria-pressed="true"]{background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.16)}
+.playb{background:rgba(118,118,128,.14);min-width:40px}
+.playb[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.ctl input[type=range]{flex:1 1 220px;accent-color:var(--sun);padding:0;background:none}
+.tout{font-size:13.5px;color:var(--graphite);font-variant-numeric:tabular-nums;min-width:15em}
+.v3d{position:relative;height:clamp(320px,46vw,480px);border-radius:var(--r-md);overflow:hidden;
+  background:linear-gradient(#dfe9f5,#f3efe7 70%)}
+@media (prefers-color-scheme:dark){.v3d{background:linear-gradient(#22303f,#2a2823 70%)}}
+.v3d canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.v3d canvas:active{cursor:grabbing}
+.v3d .fallback{position:absolute;inset:0;display:grid;place-items:center;padding:20px;text-align:center;color:var(--graphite);font-size:14px}
+.v3d.ready .fallback{display:none}
+#nlab{position:absolute;left:0;top:0;font:700 13px var(--font);color:#13171c;margin:-8px 0 0 -4px;pointer-events:none}
+.v3d .hint{position:absolute;right:12px;bottom:10px;font-size:12px;color:#5b646e;background:rgba(255,255,255,.7);border-radius:999px;padding:3px 10px;pointer-events:none}
+.views{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:18px}
+.views figure{margin:0;background:var(--paper);border-radius:var(--r-md);padding:14px 14px 10px}
+.views figcaption{font-size:13px;font-weight:600;margin:0 0 6px}
+.views figcaption span.muted{font-weight:400}
+.views svg{display:block;width:100%;height:auto}
+@media (max-width:760px){.views{grid-template-columns:minmax(0,1fr)}}
+.b-own{fill:var(--surface);stroke:var(--ink);stroke-width:.35}
+.b-nb{fill:color-mix(in srgb,var(--graphite) 28%,transparent);stroke:var(--graphite);stroke-width:.25}
+.b-lab{font:600 2.6px var(--font);fill:var(--graphite);text-anchor:middle}
+.facade{stroke:var(--sun);stroke-width:.9}
+.north{fill:var(--ink)}.north-t{font:700 4px var(--font);fill:var(--ink);text-anchor:middle}
+.ray-lit{stroke:var(--sun);stroke-width:.32}
+.ray-off{stroke:var(--fail);stroke-width:.32}
+.ray-ghost{stroke:var(--graphite);stroke-width:.18;stroke-dasharray:.6 .8;opacity:.6}
+.ray-now{stroke:var(--ink);stroke-width:.5}
+.sun-dot{fill:var(--sun);stroke:var(--ink);stroke-width:.3}
+.win-dot{fill:var(--ink)}
+.hour{font:600 2.7px var(--font);fill:var(--graphite);text-anchor:middle}
+.facade-fill{fill:var(--surface);stroke:var(--ink);stroke-width:.12}
+.ground{stroke:var(--ink);stroke-width:.15}
+.ew{cursor:pointer}
+.ew rect{opacity:.88}
+.ew.lit rect{opacity:1;stroke:#f2b544;stroke-width:.22}
+.ew-t{font:700 6px var(--font);fill:#fff;text-anchor:middle;pointer-events:none}
+.ew:focus{outline:none}.ew:focus-visible rect{stroke:var(--link);stroke-width:.3}
+.ew-sel{fill:none;stroke:var(--ink);stroke-width:.16;pointer-events:none}
+.views .wide{grid-column:1/-1}
+.detail{background:var(--paper);border-radius:var(--r-md);padding:16px}
+.det-h{font-size:15px;margin:0 0 8px}
+.mx.det td:nth-child(2){white-space:normal;color:var(--graphite)}
+.tl{display:flex;align-items:center;gap:10px;margin-top:10px}
+.tl-l{font-size:12.5px;color:var(--graphite);width:7.5em;flex:none}
+.tl-bar{position:relative;flex:1;height:14px;border-radius:7px;background:color-mix(in srgb,var(--graphite) 16%,transparent);overflow:hidden}
+.tl-bar span{position:absolute;top:0;bottom:0}
+.seg-any{background:color-mix(in srgb,var(--sun) 40%,transparent)}
+.seg-c{background:var(--sun)}
+.tl-bar .now{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink);margin-left:-1px}
 footer{padding:28px 0 60px;font-size:12.5px;color:var(--graphite)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 @media (max-width:420px){.preview{padding:18px 14px 14px}.mx{font-size:12px}.mx td,.mx th{padding:7px 3px}.mx td:last-child,.verdict{font-size:10.5px;padding:3px 8px;white-space:normal;border-radius:10px;line-height:1.2}.mx th:last-child,.mx td:last-child{width:84px}}
@@ -129,6 +185,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       Solaie <small>by AIE</small>
     </a>
     <nav aria-label="Sekcje">
+      <a href="#przyklad"><span lang="pl">Przykład</span><span lang="en">Example</span></a>
       <a href="#problem"><span lang="pl">Problem</span><span lang="en">Problem</span></a>
       <a href="#funkcje"><span lang="pl">Co robi</span><span lang="en">What it does</span></a>
       <a href="#beta"><span lang="pl">Testy</span><span lang="en">Beta</span></a>
@@ -158,7 +215,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 
     <figure class="preview" aria-label="Przykładowy fragment raportu">
       <h3><span lang="pl">Raport nasłonecznienia</span><span lang="en">Sunlight report</span><span class="mock"><span lang="pl">przykład</span><span lang="en">example</span></span></h3>
-      <p class="sub"><span lang="pl">Równonoc wiosenna i jesienna, godz. 7–17 czasu urzędowego · warunek 3 h</span><span lang="en">Spring and autumn equinox, 7–17 official time · 3 h requirement</span></p>
+      <p class="sub"><span lang="pl">Równonoc wiosenna i jesienna, godz. 7–17 czasu urzędowego · warunek 3&nbsp;h</span><span lang="en">Spring and autumn equinox, 7–17 official time · 3 h requirement</span></p>
       <table class="mx">
         <thead><tr>
           <th><span lang="pl">Pokój</span><span lang="en">Room</span></th>
@@ -172,11 +229,50 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         </tbody>
       </table>
       <p class="legend">
-        <span lang="pl">A–D: odczyty przepisu (punkt pomiaru × ciągłość). Wartości ilustracyjne, nie z rzeczywistego projektu.</span>
-        <span lang="en">A–D: readings of the rule (measurement point × continuity). Illustrative values, not from a real project.</span>
+        <span lang="pl">A–D: odczyty przepisu (punkt pomiaru × ciągłość), gorsza z dwóch równonocy. Trzy okna z <a href="#przyklad">przykładowego modelu</a> poniżej.</span>
+        <span lang="en">A–D: readings of the rule (measurement point × continuity), worse of the two equinoxes. Three windows from the <a href="#przyklad">sample model</a> below.</span>
       </p>
     </figure>
   </div>
+
+
+  <section class="card demo" id="przyklad">
+    <h2><span lang="pl">Zobacz na przykładzie</span><span lang="en">See it on an example</span></h2>
+    <p class="lead">
+      <span lang="pl">Czterokondygnacyjny budynek w Warszawie, elewacja na południowy wschód, naprzeciw blok o wysokości 25&nbsp;m. Wszystko poniżej jest liczone na żywo w przeglądarce: położenie słońca co minutę w obie równonoce, promień z każdego okna, cztery odczyty przepisu.</span>
+      <span lang="en">A four-storey building in Warsaw, facing south-east, with a 25&nbsp;m block across the street. Everything below is computed live in your browser: the sun's position every minute on both equinoxes, a ray from every window, four readings of the rule.</span>
+    </p>
+    <div class="ctl">
+      <div class="segc" role="group" aria-label="Dzień">
+        <button type="button" data-season="0" aria-pressed="true"><span lang="pl">20 marca</span><span lang="en">20 March</span></button>
+        <button type="button" data-season="1" aria-pressed="false"><span lang="pl">23 września</span><span lang="en">23 September</span></button>
+      </div>
+      <button type="button" class="playb" id="tplay" aria-pressed="false" aria-label="Odtwórz dzień / Play the day">▶︎</button>
+      <input type="range" id="tslider" min="0" max="599" step="1" value="300" aria-label="Godzina / Time of day">
+      <span class="tout" id="tout"></span>
+    </div>
+    <div class="v3d" id="v3d">
+      <div id="nlab">N</div>
+      <div class="fallback"><span lang="pl">Widok 3D wymaga WebGL. Widoki 2D poniżej działają bez niego.</span><span lang="en">The 3D view needs WebGL. The 2D views below work without it.</span></div>
+      <span class="hint"><span lang="pl">Przeciągnij, by obrócić · kliknij okno</span><span lang="en">Drag to orbit · click a window</span></span>
+    </div>
+    <div class="views">
+      <figure class="wide">
+        <figcaption><span lang="pl">Elewacja analizowanej ściany</span><span lang="en">Elevation of the analysed facade</span> <span class="muted"><span lang="pl">· kolor: werdykt, liczba: odczyt D</span><span lang="en">· colour: verdict, number: reading D</span></span></figcaption>
+        <svg id="elev2d" role="img" aria-label="Elewacja z wynikami dla każdego okna"></svg>
+        <p class="legend" style="margin:6px 0 0"><span class="verdict v-pass"><span lang="pl">spełnia</span><span lang="en">pass</span></span> <span class="verdict v-flip"><span lang="pl">zależy od odczytu</span><span lang="en">depends on reading</span></span> <span class="verdict v-fail"><span lang="pl">nie spełnia</span><span lang="en">fail</span></span> <span lang="pl">· obwódka: okno w słońcu o wybranej godzinie</span><span lang="en">· outline: window in sun at the chosen time</span></p>
+      </figure>
+      <figure>
+        <figcaption><span lang="pl">Rzut z linijką słońca</span><span lang="en">Plan with the sun ruler</span> <span class="muted"><span lang="pl">· promienie co 10 min, cyfry to godziny</span><span lang="en">· rays every 10 min, numbers are hours</span></span></figcaption>
+        <svg id="plan2d" role="img" aria-label="Rzut sytuacyjny z kierunkami słońca dla wybranego okna"></svg>
+      </figure>
+      <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+    <p class="muted" style="margin:14px 0 0;font-size:13.5px">
+      <span lang="pl">Model przykładowy: bryły bez detali, punkt pomiaru w płaszczyźnie elewacji, bez głębokości ościeży. Wtyczka liczy na geometrii z modelu Revit.</span>
+      <span lang="en">Sample model: plain masses, measurement point in the facade plane, no reveal depth. The add-in works on the geometry of your Revit model.</span>
+    </p>
+  </section>
 
   <section class="card" id="problem">
     <h2><span lang="pl">Ten sam pokój, dwa wyniki.</span><span lang="en">Same room, two answers.</span></h2>
@@ -316,5 +412,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   });
 })();
 </script>
+<script src="demo.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module" src="demo3d.js"></script>
 </body>
 </html>
